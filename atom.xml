@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>�����ŵĸ��˲���</title>
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
   <updated>2017-07-11T17:04:49.038Z</updated>
   <id>http://yoursite.com/</id>
-  
-  <author>
-    <name>John Doe</name>
-    
-  </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
