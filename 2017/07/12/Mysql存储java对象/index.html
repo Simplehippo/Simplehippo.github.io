@@ -9,13 +9,13 @@
   <title>Mysql存储java对象 | 杨育才的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="MySQL 设置字段为 blob , java对象实现Serializable接口">
-<meta name="keywords" content="mysql,java">
+<meta name="keywords" content="java,mysql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mysql存储java对象">
 <meta property="og:url" content="http://yoursite.com/2017/07/12/Mysql存储java对象/index.html">
 <meta property="og:site_name" content="杨育才的个人博客">
 <meta property="og:description" content="MySQL 设置字段为 blob , java对象实现Serializable接口">
-<meta property="og:updated_time" content="2017-07-12T08:32:42.526Z">
+<meta property="og:updated_time" content="2017-07-12T08:57:14.265Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mysql存储java对象">
 <meta name="twitter:description" content="MySQL 设置字段为 blob , java对象实现Serializable接口">
@@ -165,37 +165,17 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="MySQL-设置字段为-blob-java对象实现Serializable接口"><a href="#MySQL-设置字段为-blob-java对象实现Serializable接口" class="headerlink" title="MySQL 设置字段为 blob , java对象实现Serializable接口"></a>MySQL 设置字段为 blob , java对象实现Serializable接口</h3><p><br><a id="more"></a></p>
-<h4 id="保存对象，先将对象序列化为byte"><a href="#保存对象，先将对象序列化为byte" class="headerlink" title="保存对象，先将对象序列化为byte[]"></a>保存对象，先将对象序列化为byte[]</h4><pre><code>ByteArrayOutputStream baos = new ByteArrayOutputStream();    
-ObjectOutputStream out = null;     
-try {       
-    out = new ObjectOutputStream(baos);       
-    out.writeObject(java实例对象);     
-} catch (IOException e) {       
-    logger.error(&quot;msg2Bytes error!&quot;, e);     
-}finally{       
-    try {         
-        out.close();       
-    } catch (IOException e) {         
-        logger.error(&quot;msg2Bytes error!&quot;, e);       
-    }     
-}          
-return baos.toByteArray(); 
-</code></pre><h4 id="获取对象-使用getBytes-，将获取的byte-反序列化为Java-对象"><a href="#获取对象-使用getBytes-，将获取的byte-反序列化为Java-对象" class="headerlink" title="获取对象 使用getBytes()，将获取的byte[]反序列化为Java 对象"></a>获取对象 使用getBytes()，将获取的byte[]反序列化为Java 对象</h4><pre><code>ByteArrayInputStream bais;     
-ObjectInputStream in = null;     
-try{       
-    bais = new ByteArrayInputStream(bytes);       
-    in = new ObjectInputStream(bais);         
-    return (java类)in.readObject();     
-}finally{       
-    if(in != null){         
-        try {           
-            in.close();         
-        } catch (IOException e) {           
-            logger.error(&quot;bytes2Msg error!&quot;, e);         
-        }       
-    }     
-} 
-</code></pre><h3 id="网上的其他方式会有各类问题，慎用。"><a href="#网上的其他方式会有各类问题，慎用。" class="headerlink" title="网上的其他方式会有各类问题，慎用。"></a>网上的其他方式会有各类问题，慎用。</h3><h4 id="包括"><a href="#包括" class="headerlink" title="包括:"></a>包括:</h4><ul>
+<ul>
+<li><p>保存对象，先将对象序列化为byte[]</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">ByteArrayOutputStream baos = new ByteArrayOutputStream();    </div><div class="line">ObjectOutputStream out = null;     </div><div class="line">try &#123;       </div><div class="line">    out = new ObjectOutputStream(baos);       </div><div class="line">    out.writeObject(java实例对象);     </div><div class="line">&#125; catch (IOException e) &#123;       </div><div class="line">    logger.error(&quot;msg2Bytes error!&quot;, e);     </div><div class="line">&#125;finally&#123;       </div><div class="line">    try &#123;         </div><div class="line">        out.close();       </div><div class="line">    &#125; catch (IOException e) &#123;         </div><div class="line">        logger.error(&quot;msg2Bytes error!&quot;, e);       </div><div class="line">    &#125;     </div><div class="line">&#125;          </div><div class="line">return baos.toByteArray();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>获取对象 使用getBytes()，将获取的byte[]反序列化为Java 对象</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">ByteArrayInputStream bais;     </div><div class="line">ObjectInputStream in = null;     </div><div class="line">try&#123;       </div><div class="line">    bais = new ByteArrayInputStream(bytes);       </div><div class="line">    in = new ObjectInputStream(bais);         </div><div class="line">    return (java类)in.readObject();     </div><div class="line">&#125;finally&#123;       </div><div class="line">    if(in != null)&#123;         </div><div class="line">        try &#123;           </div><div class="line">            in.close();         </div><div class="line">        &#125; catch (IOException e) &#123;           </div><div class="line">            logger.error(&quot;bytes2Msg error!&quot;, e);         </div><div class="line">        &#125;       </div><div class="line">    &#125;     </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="网上的其他方式会有各类问题，慎用。"><a href="#网上的其他方式会有各类问题，慎用。" class="headerlink" title="网上的其他方式会有各类问题，慎用。"></a>网上的其他方式会有各类问题，慎用。</h3><h4 id="包括"><a href="#包括" class="headerlink" title="包括:"></a>包括:</h4><ul>
 <li>1.设置url参数 <ul>
 <li>autoDeserialize=true</li>
 </ul>
@@ -219,11 +199,11 @@ try{
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
         		</li>
       		
 		</ul>
@@ -419,11 +399,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
