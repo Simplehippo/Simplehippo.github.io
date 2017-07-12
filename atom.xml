@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-12T07:02:23.714Z</updated>
+  <updated>2017-07-12T07:03:32.564Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,14 +20,14 @@
     <link href="http://yoursite.com/2017/07/12/git%E5%AD%A6%E4%B9%A0/"/>
     <id>http://yoursite.com/2017/07/12/git学习/</id>
     <published>2017-07-12T06:26:03.000Z</published>
-    <updated>2017-07-12T07:02:23.714Z</updated>
+    <updated>2017-07-12T07:03:32.564Z</updated>
     
     <content type="html"><![CDATA[<h2 id="非git-的命令"><a href="#非git-的命令" class="headerlink" title="非git 的命令"></a>非git 的命令</h2><ul>
 <li>[mkdir 文件名]      创建一个文件夹</li>
 <li>[cd]                 进入一个文件夹</li>
 <li>[cat]                 查看文件内容</li>
 <li>[pwd]                查看当前路径</li>
-<li>[rm]                删除文件<a id="more"></a></li>
+<li>[rm]                删除文件<br><a id="more"></a></li>
 <li>[rmdir]                删除空的文件夹</li>
 </ul>
 <h2 id="git-的命令"><a href="#git-的命令" class="headerlink" title="git 的命令"></a>git 的命令</h2><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><ul>
@@ -102,7 +102,7 @@
 &lt;li&gt;[cd]                 进入一个文件夹&lt;/li&gt;
 &lt;li&gt;[cat]                 查看文件内容&lt;/li&gt;
 &lt;li&gt;[pwd]                查看当前路径&lt;/li&gt;
-&lt;li&gt;[rm]                删除文件
+&lt;li&gt;[rm]                删除文件&lt;br&gt;
     
     </summary>
     
