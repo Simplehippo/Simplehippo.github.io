@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Mysql存储java对象 | 杨育才的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="MySQL  设置字段为 blob">
+  <meta name="description" content="MySQL  设置字段为 blob , java对象实现Serializable接口">
 <meta name="keywords" content="mysql,java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mysql存储java对象">
 <meta property="og:url" content="http://yoursite.com/2017/07/12/Mysql存储java对象/index.html">
 <meta property="og:site_name" content="杨育才的个人博客">
-<meta property="og:description" content="MySQL  设置字段为 blob">
-<meta property="og:updated_time" content="2017-07-12T08:23:34.986Z">
+<meta property="og:description" content="MySQL  设置字段为 blob , java对象实现Serializable接口">
+<meta property="og:updated_time" content="2017-07-12T08:28:38.894Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mysql存储java对象">
-<meta name="twitter:description" content="MySQL  设置字段为 blob">
+<meta name="twitter:description" content="MySQL  设置字段为 blob , java对象实现Serializable接口">
   
     <link rel="alternative" href="/atom.xml" title="杨育才的个人博客" type="application/atom+xml">
   
@@ -164,8 +164,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="MySQL-设置字段为-blob"><a href="#MySQL-设置字段为-blob" class="headerlink" title="MySQL  设置字段为 blob"></a>MySQL  设置字段为 blob</h3><a id="more"></a>
-<h4 id="保存对象，先将对象序列化为byte-使用-setObject-byte-bytes"><a href="#保存对象，先将对象序列化为byte-使用-setObject-byte-bytes" class="headerlink" title="保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes)"></a>保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes)</h4><pre><code>ByteArrayOutputStream baos = new ByteArrayOutputStream();    
+        <h3 id="MySQL-设置字段为-blob-java对象实现Serializable接口"><a href="#MySQL-设置字段为-blob-java对象实现Serializable接口" class="headerlink" title="MySQL  设置字段为 blob , java对象实现Serializable接口"></a>MySQL  设置字段为 blob , java对象实现Serializable接口</h3><a id="more"></a>
+<h4 id="保存对象，先将对象序列化为byte"><a href="#保存对象，先将对象序列化为byte" class="headerlink" title="保存对象，先将对象序列化为byte[]"></a>保存对象，先将对象序列化为byte[]</h4><pre><code>ByteArrayOutputStream baos = new ByteArrayOutputStream();    
 ObjectOutputStream out = null;     
 try {       
     out = new ObjectOutputStream(baos);       
@@ -419,19 +419,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">

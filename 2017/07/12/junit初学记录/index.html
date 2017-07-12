@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/07/12/junit初学记录/index.html">
 <meta property="og:site_name" content="杨育才的个人博客">
 <meta property="og:description" content="基本注解(需要在开始的时候创建一个被测试类的实例)@Test 测试的注解有限制:方法必须返回void,并且方法不能有参数扩展:####### 1.可以加入限时:限时2秒  @Test(timeout = 2000)####### 2.可以测试异常">
-<meta property="og:updated_time" content="2017-07-12T08:24:48.029Z">
+<meta property="og:updated_time" content="2017-07-12T08:30:40.787Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="junit初学记录">
 <meta name="twitter:description" content="基本注解(需要在开始的时候创建一个被测试类的实例)@Test 测试的注解有限制:方法必须返回void,并且方法不能有参数扩展:####### 1.可以加入限时:限时2秒  @Test(timeout = 2000)####### 2.可以测试异常">
@@ -261,15 +261,12 @@ public   class  SquareTest  {
 <li>@RunWith(Suite.class)</li>
 </ul>
 </li>
-<li><p>2.打包的类作为参数传递进去,结尾不加;<br>  这只是个注解</p>
-<p>  @Suite.SuiteClasses({</p>
-<pre><code>SquareTest.class,
-CalculatorTest.class
-</code></pre><p>  })</p>
-</li>
+<li>2.打包的类作为参数传递进去,结尾不加’;’<br>  这只是个注解<br>  @Suite.SuiteClasses({<pre><code>xx.class,
+xxx.class
+</code></pre>  })</li>
 <li>3.随便起个类名,内容为空即可<br>  public class xxx {}<h5 id="实例"><a href="#实例" class="headerlink" title="实例:"></a>实例:</h5>  @RunWith(Suite. class )<br>  @Suite.SuiteClasses( {<pre><code>CalculatorTest.class,
 SquareTest.class 
-</code></pre>   } )<br>   public   class  AllCalculatorTests  {<br>   } </li>
+</code></pre>  } )<br>  public   class  AllCalculatorTests  {<br>  } </li>
 </ul>
 
       
@@ -484,19 +481,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
