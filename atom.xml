@@ -135,10 +135,11 @@ try{
     <link href="http://yoursite.com/2017/07/12/junit%E5%88%9D%E5%AD%A6%E8%AE%B0%E5%BD%95/"/>
     <id>http://yoursite.com/2017/07/12/junit初学记录/</id>
     <published>2017-07-12T07:24:23.000Z</published>
-    <updated>2017-07-12T08:39:57.636Z</updated>
+    <updated>2017-07-12T08:41:57.219Z</updated>
     
     <content type="html"><![CDATA[<h2 id="基本注解-需要在开始的时候创建一个被测试类的实例"><a href="#基本注解-需要在开始的时候创建一个被测试类的实例" class="headerlink" title="基本注解(需要在开始的时候创建一个被测试类的实例)"></a>基本注解(需要在开始的时候创建一个被测试类的实例)</h2><h3 id="Test"><a href="#Test" class="headerlink" title="@Test"></a>@Test</h3><ul>
-<li>测试的注解<br>有限制:方法必须返回void,并且方法不能有参数<h5 id="扩展"><a href="#扩展" class="headerlink" title="扩展:"></a>扩展:</h5><h6 id="1-可以加入限时-限时2秒"><a href="#1-可以加入限时-限时2秒" class="headerlink" title="1.可以加入限时:限时2秒"></a>1.可以加入限时:限时2秒<br><a id="more"></a></h6>  @Test(timeout = 2000)   <h6 id="2-可以测试异常"><a href="#2-可以测试异常" class="headerlink" title="2.可以测试异常"></a>2.可以测试异常</h6>  @Test( expected = ArithmeticException.class)<br>  public void testDivide() {<pre><code>c.divide(0);
+<li>测试的注解<br>有限制:方法必须返回void,并且方法不能有参数<h5 id="扩展"><a href="#扩展" class="headerlink" title="扩展:"></a>扩展:</h5><h6 id="1-可以加入限时-限时2秒"><a href="#1-可以加入限时-限时2秒" class="headerlink" title="1.可以加入限时:限时2秒"></a>1.可以加入限时:限时2秒<br><a id="more"></a></h6>  @Test(timeout = 2000)   <h6 id="2-可以测试异常"><a href="#2-可以测试异常" class="headerlink" title="2.可以测试异常"></a>2.可以测试异常</h6>  @Test( expected = ArithmeticException.class)<br>  public void testDivide() {<pre><code>...
+//c.divide(0);
 </code></pre>  }</li>
 </ul>
 <h3 id="Before"><a href="#Before" class="headerlink" title="@Before"></a>@Before</h3><ul>
@@ -233,8 +234,8 @@ public   class  SquareTest  {
 <li>@RunWith(Suite.class)</li>
 </ul>
 </li>
-<li>2.打包的类作为参数传递进去,结尾不加’;’,这只是个注解<br>  @Suite.SuiteClasses({<pre><code>//xx.class,
-</code></pre>  })</li>
+<li>2.打包的类作为参数传递进去,结尾不加’;’,这只是个注解<br>  @Suite.SuiteClasses( {<pre><code>...
+</code></pre>  } )</li>
 <li>3.随便起个类名,内容为空即可<br>  public class xxx {}</li>
 </ul>
 <h4 id="实例"><a href="#实例" class="headerlink" title="实例:"></a>实例:</h4><pre><code>@RunWith(Suite. class ) 
