@@ -120,7 +120,7 @@
     <link href="http://yoursite.com/2017/07/12/junit%E5%88%9D%E5%AD%A6%E8%AE%B0%E5%BD%95/"/>
     <id>http://yoursite.com/2017/07/12/junit初学记录/</id>
     <published>2017-07-12T07:24:23.000Z</published>
-    <updated>2017-07-12T11:44:28.569Z</updated>
+    <updated>2017-07-12T11:49:34.976Z</updated>
     
     <content type="html"><![CDATA[<h2 id="基本注解-需要在开始的时候创建一个被测试类的实例"><a href="#基本注解-需要在开始的时候创建一个被测试类的实例" class="headerlink" title="基本注解(需要在开始的时候创建一个被测试类的实例)"></a>基本注解(需要在开始的时候创建一个被测试类的实例)</h2><h3 id="Test"><a href="#Test" class="headerlink" title="@Test"></a>@Test</h3><ul>
 <li><p>测试的注解<br>有限制:方法必须返回void,并且方法不能有参数</p>
@@ -192,15 +192,11 @@
 </li>
 <li><p>3.随便起个类名,内容为空即可<br>  public class xxx {}</p>
 </li>
+<li><p>实例:</p>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RunWith</span>(Suite. <span class="class"><span class="keyword">class</span> ) </span></div><div class="line">@<span class="title">Suite</span>.<span class="title">SuiteClasses</span>( &#123;</div><div class="line">	CalculatorTest.class,</div><div class="line">	SquareTest.class </div><div class="line">&#125; )</div><div class="line"><span class="keyword">public</span>   <span class="class"><span class="keyword">class</span>  <span class="title">AllCalculatorTests</span>  </span>&#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<h4 id="实例"><a href="#实例" class="headerlink" title="实例:"></a>实例:</h4><pre><code>@RunWith(Suite. class ) 
-@Suite.SuiteClasses( {
-    CalculatorTest.class,
-    SquareTest.class 
-} )
-public   class  AllCalculatorTests  {
-} 
-</code></pre>]]></content>
+]]></content>
     
     <summary type="html">
     
