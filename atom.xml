@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-12T07:59:51.503Z</updated>
+  <updated>2017-07-12T08:15:34.426Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://yoursite.com/2017/07/12/java%E8%8E%B7%E5%8F%96%E6%9C%AC%E6%9C%BA%E5%B1%80%E5%9F%9F%E7%BD%91IP/"/>
     <id>http://yoursite.com/2017/07/12/java获取本机局域网IP/</id>
     <published>2017-07-12T07:42:34.000Z</published>
-    <updated>2017-07-12T07:59:51.503Z</updated>
+    <updated>2017-07-12T08:15:34.426Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="1-java获取本机局域网IP的方法"><a href="#1-java获取本机局域网IP的方法" class="headerlink" title="1.java获取本机局域网IP的方法"></a>1.java获取本机局域网IP的方法</h1><h3 id="java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。"><a href="#java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。" class="headerlink" title="java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。"></a>java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。</h3><ul>
+    <content type="html"><![CDATA[<h2 id="1-java获取本机局域网IP的方法"><a href="#1-java获取本机局域网IP的方法" class="headerlink" title="1.java获取本机局域网IP的方法"></a>1.java获取本机局域网IP的方法</h2><h3 id="java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。"><a href="#java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。" class="headerlink" title="java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。"></a>java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。</h3><ul>
 <li>例如：<ul>
 <li>System.out.println(“my IP is: “+InetAddress.getLocalHost().getHostAddress());</li>
 </ul>
@@ -30,7 +30,7 @@
 <li>对于通过网关上网（如路由器设备），上述方法则是无效的。<br><a id="more"></a>
 </li>
 </ul>
-<h1 id="2-获取公网IP的思路"><a href="#2-获取公网IP的思路" class="headerlink" title="2.获取公网IP的思路"></a>2.获取公网IP的思路</h1><ul>
+<h2 id="2-获取公网IP的思路"><a href="#2-获取公网IP的思路" class="headerlink" title="2.获取公网IP的思路"></a>2.获取公网IP的思路</h2><ul>
 <li>1.调用操作系统命令（如windows下的ipconfig /all)；(未验证)</li>
 <li>2.访问公网资源，由公网中特定程序捕获IP。(可行但麻烦)</li>
 </ul>
@@ -48,7 +48,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;1-java获取本机局域网IP的方法&quot;&gt;&lt;a href=&quot;#1-java获取本机局域网IP的方法&quot; class=&quot;headerlink&quot; title=&quot;1.java获取本机局域网IP的方法&quot;&gt;&lt;/a&gt;1.java获取本机局域网IP的方法&lt;/h1&gt;&lt;h3 id=&quot;java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。&quot;&gt;&lt;a href=&quot;#java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。&quot; class=&quot;headerlink&quot; title=&quot;java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。&quot;&gt;&lt;/a&gt;java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。&lt;/h3&gt;&lt;ul&gt;
+      &lt;h2 id=&quot;1-java获取本机局域网IP的方法&quot;&gt;&lt;a href=&quot;#1-java获取本机局域网IP的方法&quot; class=&quot;headerlink&quot; title=&quot;1.java获取本机局域网IP的方法&quot;&gt;&lt;/a&gt;1.java获取本机局域网IP的方法&lt;/h2&gt;&lt;h3 id=&quot;java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。&quot;&gt;&lt;a href=&quot;#java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。&quot; class=&quot;headerlink&quot; title=&quot;java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。&quot;&gt;&lt;/a&gt;java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;例如：&lt;ul&gt;
 &lt;li&gt;System.out.println(“my IP is: “+InetAddress.getLocalHost().getHostAddress());&lt;/li&gt;
 &lt;/ul&gt;
@@ -71,37 +71,43 @@
     <link href="http://yoursite.com/2017/07/12/Mysql%E5%AD%98%E5%82%A8java%E5%AF%B9%E8%B1%A1/"/>
     <id>http://yoursite.com/2017/07/12/Mysql存储java对象/</id>
     <published>2017-07-12T07:38:48.000Z</published>
-    <updated>2017-07-12T08:07:49.672Z</updated>
+    <updated>2017-07-12T08:15:02.864Z</updated>
     
     <content type="html"><![CDATA[<h3 id="MySQL-设置字段为-blob"><a href="#MySQL-设置字段为-blob" class="headerlink" title="MySQL  设置字段为 blob"></a>MySQL  设置字段为 blob</h3><ul>
-<li><p>保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes)<br><a id="more"></a></p>
-<ul>
-<li>  ByteArrayOutputStream baos = new ByteArrayOutputStream();<br>  ObjectOutputStream out = null;<br>  try {       <pre><code>out = new ObjectOutputStream(baos);       
-out.writeObject(java实例对象);     
-</code></pre>  } catch (IOException e) {       <pre><code>logger.error(&quot;msg2Bytes error!&quot;, e);     
-</code></pre>  }finally{       <pre><code>try {         
-    out.close();       
-} catch (IOException e) {         
-    logger.error(&quot;msg2Bytes error!&quot;, e);       
-}     
-</code></pre>  }<br>  return baos.toByteArray(); </li>
-</ul>
-</li>
+<li>保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes)<br><a id="more"></a></li>
+<li><pre><code>ByteArrayOutputStream baos = new ByteArrayOutputStream();    
+ObjectOutputStream out = null;     
+try {       
+    out = new ObjectOutputStream(baos);       
+    out.writeObject(java实例对象);     
+} catch (IOException e) {       
+    logger.error(&quot;msg2Bytes error!&quot;, e);     
+}finally{       
+    try {         
+        out.close();       
+    } catch (IOException e) {         
+        logger.error(&quot;msg2Bytes error!&quot;, e);       
+    }     
+}          
+return baos.toByteArray(); 
+</code></pre></li>
 <li><p>获取对象 使用getBytes()，将获取的byte[]反序列化为Java 对象</p>
-<ul>
-<li>  ByteArrayInputStream bais;<br>  ObjectInputStream in = null;<br>  try{       <pre><code>bais = new ByteArrayInputStream(bytes);       
-in = new ObjectInputStream(bais);         
-return (java类)in.readObject();     
-</code></pre>  }finally{       <pre><code>if(in != null){         
-    try {           
-        in.close();         
-    } catch (IOException e) {           
-        logger.error(&quot;bytes2Msg error!&quot;, e);         
-    }       
-}     
-</code></pre>  } </li>
-</ul>
-</li>
+<pre><code>ByteArrayInputStream bais;     
+ObjectInputStream in = null;     
+try{       
+    bais = new ByteArrayInputStream(bytes);       
+    in = new ObjectInputStream(bais);         
+    return (java类)in.readObject();     
+}finally{       
+    if(in != null){         
+        try {           
+            in.close();         
+        } catch (IOException e) {           
+            logger.error(&quot;bytes2Msg error!&quot;, e);         
+        }       
+    }     
+} 
+</code></pre></li>
 </ul>
 <h3 id="网上的其他方式会有各类问题，慎用。"><a href="#网上的其他方式会有各类问题，慎用。" class="headerlink" title="网上的其他方式会有各类问题，慎用。"></a>网上的其他方式会有各类问题，慎用。</h3><h4 id="包括"><a href="#包括" class="headerlink" title="包括:"></a>包括:</h4><ul>
 <li>1.设置url参数 <ul>
@@ -119,7 +125,7 @@ return (java类)in.readObject();
     <summary type="html">
     
       &lt;h3 id=&quot;MySQL-设置字段为-blob&quot;&gt;&lt;a href=&quot;#MySQL-设置字段为-blob&quot; class=&quot;headerlink&quot; title=&quot;MySQL  设置字段为 blob&quot;&gt;&lt;/a&gt;MySQL  设置字段为 blob&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes)&lt;br&gt;
+&lt;li&gt;保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes)&lt;br&gt;
     
     </summary>
     
@@ -135,20 +141,20 @@ return (java类)in.readObject();
     <link href="http://yoursite.com/2017/07/12/junit%E5%88%9D%E5%AD%A6%E8%AE%B0%E5%BD%95/"/>
     <id>http://yoursite.com/2017/07/12/junit初学记录/</id>
     <published>2017-07-12T07:24:23.000Z</published>
-    <updated>2017-07-12T08:06:24.252Z</updated>
+    <updated>2017-07-12T08:13:55.488Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="需要在开始的时候创建一个被测试类的实例"><a href="#需要在开始的时候创建一个被测试类的实例" class="headerlink" title="需要在开始的时候创建一个被测试类的实例"></a>需要在开始的时候创建一个被测试类的实例</h2><h3 id="Test"><a href="#Test" class="headerlink" title="@Test"></a>@Test</h3><ul>
-<li>测试的注解<br>有限制:方法必须返回void,并且方法不能有参数<h5 id="扩展"><a href="#扩展" class="headerlink" title="扩展:"></a>扩展:</h5></li>
+    <content type="html"><![CDATA[<h3 id="基本注解-需要在开始的时候创建一个被测试类的实例"><a href="#基本注解-需要在开始的时候创建一个被测试类的实例" class="headerlink" title="基本注解(需要在开始的时候创建一个被测试类的实例)"></a>基本注解(需要在开始的时候创建一个被测试类的实例)</h3><h4 id="Test"><a href="#Test" class="headerlink" title="@Test"></a>@Test</h4><ul>
+<li>测试的注解<br>有限制:方法必须返回void,并且方法不能有参数<h6 id="扩展"><a href="#扩展" class="headerlink" title="扩展:"></a>扩展:</h6></li>
 <li>1.可以加入限时:<ul>
 <li>@Test(timeout = 2000)   限时2秒</li>
 </ul>
 </li>
 <li>2.可以测试异常<br><a id="more"></a>
-  `@Test( expected = ArithmeticException.class)<pre><code>public void testDivide() {
+  @Test( expected = ArithmeticException.class)<pre><code>public void testDivide() {
         c.divide(0);
-</code></pre>  }`</li>
+</code></pre>  }</li>
 </ul>
-<h3 id="Before"><a href="#Before" class="headerlink" title="@Before"></a>@Before</h3><ul>
+<h4 id="Before"><a href="#Before" class="headerlink" title="@Before"></a>@Before</h4><ul>
 <li>在所有的Test注解标志的单元测试之前执行<br>但是,除首次生成的@Before注解的方法外,<br>其他的@Before注解的方法是按照修改顺序反向执行,</li>
 <li><p>例如:</p>
 <ul>
@@ -164,18 +170,18 @@ return (java类)in.readObject();
 </ul>
 </li>
 </ul>
-<h3 id="After"><a href="#After" class="headerlink" title="@After"></a>@After</h3><ul>
+<h4 id="After"><a href="#After" class="headerlink" title="@After"></a>@After</h4><ul>
 <li>在所有的Test注解标志的单元测试之后执行<br>顺序跟@Before反过来    1 2 3 0</li>
 </ul>
-<h3 id="BeforeClass"><a href="#BeforeClass" class="headerlink" title="@BeforeClass"></a>@BeforeClass</h3><ul>
+<h4 id="BeforeClass"><a href="#BeforeClass" class="headerlink" title="@BeforeClass"></a>@BeforeClass</h4><ul>
 <li>必须是   public static void xxx () {}   形式</li>
 <li>在开始的时候执行一次<br>只会在最开始执行一次,也仅有一次</li>
 </ul>
-<h3 id="AfterClass"><a href="#AfterClass" class="headerlink" title="@AfterClass"></a>@AfterClass</h3><ul>
+<h4 id="AfterClass"><a href="#AfterClass" class="headerlink" title="@AfterClass"></a>@AfterClass</h4><ul>
 <li>必须是   public static void xxx () {}   形式</li>
 <li>在所有的测试都结束的时候执行一次<br>只会在最后执行一次,也仅有一次</li>
 </ul>
-<h3 id="RunWith"><a href="#RunWith" class="headerlink" title="@RunWith"></a>@RunWith</h3><ul>
+<h4 id="RunWith"><a href="#RunWith" class="headerlink" title="@RunWith"></a>@RunWith</h4><ul>
 <li>使用在类上,作用于类中的所有方法</li>
 <li>使用:     <ul>
 <li>@RunWith (TestClassRunner.calss)</li>
@@ -183,7 +189,7 @@ return (java类)in.readObject();
 </ul>
 </li>
 </ul>
-<h3 id="参数化测试-不多于三个就不用-最好写个模板"><a href="#参数化测试-不多于三个就不用-最好写个模板" class="headerlink" title="参数化测试:不多于三个就不用,最好写个模板"></a>参数化测试:不多于三个就不用,最好写个模板</h3><h4 id="具体做法"><a href="#具体做法" class="headerlink" title="具体做法:"></a>具体做法:</h4><ul>
+<h4 id="参数化测试-不多于三个就不用-最好写个模板"><a href="#参数化测试-不多于三个就不用-最好写个模板" class="headerlink" title="参数化测试:不多于三个就不用,最好写个模板"></a>参数化测试:不多于三个就不用,最好写个模板</h4><h5 id="具体做法"><a href="#具体做法" class="headerlink" title="具体做法:"></a>具体做法:</h5><ul>
 <li>1.新建另一个测试类</li>
 <li>2.运行器:Parameterized.class</li>
 <li>3.增加两个参数:para,res(名字,顺序无所谓)</li>
@@ -207,7 +213,8 @@ return (java类)in.readObject();
 </ul>
 </li>
 </ul>
-<h3 id="RunWith-Parameterized-class"><a href="#RunWith-Parameterized-class" class="headerlink" title="@RunWith(Parameterized. class )"></a>@RunWith(Parameterized. class )</h3><pre><code>public   class  SquareTest  {
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例:"></a>示例:</h4><pre><code>@RunWith(Parameterized. class )
+public   class  SquareTest  {
 
   private   static  Calculator calculator  =   new  Calculator();
 
@@ -256,7 +263,7 @@ return (java类)in.readObject();
      }
 
  } 
-</code></pre><h3 id="打包测试"><a href="#打包测试" class="headerlink" title="打包测试:"></a>打包测试:</h3><h4 id="具体做法-1"><a href="#具体做法-1" class="headerlink" title="具体做法:"></a>具体做法:</h4><ul>
+</code></pre><h4 id="打包测试"><a href="#打包测试" class="headerlink" title="打包测试:"></a>打包测试:</h4><h5 id="具体做法-1"><a href="#具体做法-1" class="headerlink" title="具体做法:"></a>具体做法:</h5><ul>
 <li>1.运行器:Suite.class<ul>
 <li>@RunWith(Suite.class)</li>
 </ul>
@@ -264,7 +271,7 @@ return (java类)in.readObject();
 <li>2.打包的类作为参数传递进去,结尾不加;<br>  这只是个注解<br>  @Suite.SuiteClasses({<pre><code>xx.class,
 xx.class
 </code></pre>  })</li>
-<li>3.随便起个类名,内容为空即可<br>  public class xxx {}<h4 id="实例"><a href="#实例" class="headerlink" title="实例:"></a>实例:</h4>  @RunWith(Suite. class )<br>  @Suite.SuiteClasses( {<pre><code>CalculatorTest. class ,
+<li>3.随便起个类名,内容为空即可<br>  public class xxx {}<h5 id="实例"><a href="#实例" class="headerlink" title="实例:"></a>实例:</h5>  @RunWith(Suite. class )<br>  @Suite.SuiteClasses( {<pre><code>CalculatorTest. class ,
 SquareTest. class 
 </code></pre>   } )<br>   public   class  AllCalculatorTests  {<br>   } </li>
 </ul>
@@ -272,8 +279,8 @@ SquareTest. class
     
     <summary type="html">
     
-      &lt;h2 id=&quot;需要在开始的时候创建一个被测试类的实例&quot;&gt;&lt;a href=&quot;#需要在开始的时候创建一个被测试类的实例&quot; class=&quot;headerlink&quot; title=&quot;需要在开始的时候创建一个被测试类的实例&quot;&gt;&lt;/a&gt;需要在开始的时候创建一个被测试类的实例&lt;/h2&gt;&lt;h3 id=&quot;Test&quot;&gt;&lt;a href=&quot;#Test&quot; class=&quot;headerlink&quot; title=&quot;@Test&quot;&gt;&lt;/a&gt;@Test&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;测试的注解&lt;br&gt;有限制:方法必须返回void,并且方法不能有参数&lt;h5 id=&quot;扩展&quot;&gt;&lt;a href=&quot;#扩展&quot; class=&quot;headerlink&quot; title=&quot;扩展:&quot;&gt;&lt;/a&gt;扩展:&lt;/h5&gt;&lt;/li&gt;
+      &lt;h3 id=&quot;基本注解-需要在开始的时候创建一个被测试类的实例&quot;&gt;&lt;a href=&quot;#基本注解-需要在开始的时候创建一个被测试类的实例&quot; class=&quot;headerlink&quot; title=&quot;基本注解(需要在开始的时候创建一个被测试类的实例)&quot;&gt;&lt;/a&gt;基本注解(需要在开始的时候创建一个被测试类的实例)&lt;/h3&gt;&lt;h4 id=&quot;Test&quot;&gt;&lt;a href=&quot;#Test&quot; class=&quot;headerlink&quot; title=&quot;@Test&quot;&gt;&lt;/a&gt;@Test&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;测试的注解&lt;br&gt;有限制:方法必须返回void,并且方法不能有参数&lt;h6 id=&quot;扩展&quot;&gt;&lt;a href=&quot;#扩展&quot; class=&quot;headerlink&quot; title=&quot;扩展:&quot;&gt;&lt;/a&gt;扩展:&lt;/h6&gt;&lt;/li&gt;
 &lt;li&gt;1.可以加入限时:&lt;ul&gt;
 &lt;li&gt;@Test(timeout = 2000)   限时2秒&lt;/li&gt;
 &lt;/ul&gt;

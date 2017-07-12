@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/07/12/Mysql存储java对象/index.html">
 <meta property="og:site_name" content="杨育才的个人博客">
 <meta property="og:description" content="MySQL  设置字段为 blob 保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes)">
-<meta property="og:updated_time" content="2017-07-12T08:07:49.672Z">
+<meta property="og:updated_time" content="2017-07-12T08:15:02.864Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mysql存储java对象">
 <meta name="twitter:description" content="MySQL  设置字段为 blob 保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes)">
@@ -165,34 +165,40 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="MySQL-设置字段为-blob"><a href="#MySQL-设置字段为-blob" class="headerlink" title="MySQL  设置字段为 blob"></a>MySQL  设置字段为 blob</h3><ul>
-<li><p>保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes)<br><a id="more"></a></p>
-<ul>
-<li>  ByteArrayOutputStream baos = new ByteArrayOutputStream();<br>  ObjectOutputStream out = null;<br>  try {       <pre><code>out = new ObjectOutputStream(baos);       
-out.writeObject(java实例对象);     
-</code></pre>  } catch (IOException e) {       <pre><code>logger.error(&quot;msg2Bytes error!&quot;, e);     
-</code></pre>  }finally{       <pre><code>try {         
-    out.close();       
-} catch (IOException e) {         
-    logger.error(&quot;msg2Bytes error!&quot;, e);       
-}     
-</code></pre>  }<br>  return baos.toByteArray(); </li>
-</ul>
-</li>
+<li>保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes)<br><a id="more"></a></li>
+<li><pre><code>ByteArrayOutputStream baos = new ByteArrayOutputStream();    
+ObjectOutputStream out = null;     
+try {       
+    out = new ObjectOutputStream(baos);       
+    out.writeObject(java实例对象);     
+} catch (IOException e) {       
+    logger.error(&quot;msg2Bytes error!&quot;, e);     
+}finally{       
+    try {         
+        out.close();       
+    } catch (IOException e) {         
+        logger.error(&quot;msg2Bytes error!&quot;, e);       
+    }     
+}          
+return baos.toByteArray(); 
+</code></pre></li>
 <li><p>获取对象 使用getBytes()，将获取的byte[]反序列化为Java 对象</p>
-<ul>
-<li>  ByteArrayInputStream bais;<br>  ObjectInputStream in = null;<br>  try{       <pre><code>bais = new ByteArrayInputStream(bytes);       
-in = new ObjectInputStream(bais);         
-return (java类)in.readObject();     
-</code></pre>  }finally{       <pre><code>if(in != null){         
-    try {           
-        in.close();         
-    } catch (IOException e) {           
-        logger.error(&quot;bytes2Msg error!&quot;, e);         
-    }       
-}     
-</code></pre>  } </li>
-</ul>
-</li>
+<pre><code>ByteArrayInputStream bais;     
+ObjectInputStream in = null;     
+try{       
+    bais = new ByteArrayInputStream(bytes);       
+    in = new ObjectInputStream(bais);         
+    return (java类)in.readObject();     
+}finally{       
+    if(in != null){         
+        try {           
+            in.close();         
+        } catch (IOException e) {           
+            logger.error(&quot;bytes2Msg error!&quot;, e);         
+        }       
+    }     
+} 
+</code></pre></li>
 </ul>
 <h3 id="网上的其他方式会有各类问题，慎用。"><a href="#网上的其他方式会有各类问题，慎用。" class="headerlink" title="网上的其他方式会有各类问题，慎用。"></a>网上的其他方式会有各类问题，慎用。</h3><h4 id="包括"><a href="#包括" class="headerlink" title="包括:"></a>包括:</h4><ul>
 <li>1.设置url参数 <ul>
@@ -446,11 +452,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">junit</a>
+                <a href="javascript:void(0)" class="js-tag color1">开源小项目</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">开源小项目</a>
+                <a href="javascript:void(0)" class="js-tag color1">junit</a>
               </li>
             
             <div class="clearfix"></div>
