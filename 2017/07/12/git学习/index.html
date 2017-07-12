@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/07/12/git学习/index.html">
 <meta property="og:site_name" content="杨育才的个人博客">
 <meta property="og:description" content="非git 的命令 [mkdir 文件名]      创建一个文件夹 [cd]                 进入一个文件夹 [cat]                 查看文件内容 [pwd]                查看当前路径 [rm]                删除文件">
-<meta property="og:updated_time" content="2017-07-12T07:05:25.453Z">
+<meta property="og:updated_time" content="2017-07-12T07:09:02.039Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git学习">
 <meta name="twitter:description" content="非git 的命令 [mkdir 文件名]      创建一个文件夹 [cd]                 进入一个文件夹 [cat]                 查看文件内容 [pwd]                查看当前路径 [rm]                删除文件">
@@ -70,7 +70,7 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">致谢</a>
     			
             
     			
@@ -173,7 +173,9 @@
 <li>[rmdir]                删除空的文件夹</li>
 </ul>
 <h2 id="git-的命令"><a href="#git-的命令" class="headerlink" title="git 的命令"></a>git 的命令</h2><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><ul>
-<li>[$ git init]                 初始化一个git仓库<h3 id="1-常用命令"><a href="#1-常用命令" class="headerlink" title="1.常用命令"></a>1.常用命令</h3></li>
+<li>[$ git init]                 初始化一个git仓库</li>
+</ul>
+<h3 id="1-常用命令"><a href="#1-常用命令" class="headerlink" title="1.常用命令"></a>1.常用命令</h3><ul>
 <li>[$ git status]                显示所有文件的状态</li>
 <li>[$ git add  文件名]          把文件加到暂存区</li>
 <li>[$ git commit -m “描述”]       把暂存区的内容提交</li>
@@ -181,22 +183,34 @@
 <li>[$ git log]                    显示文件的提交日志</li>
 <li>[$ git log –pretty=oneline]    在一行里显示文件的提交日志</li>
 <li>[$ git reflog]                        显示当前仓库的提交和回退操作指令日志</li>
-<li>[$ git log –graph –pretty=oneline –abbrev-commit]            看提交的结构<h3 id="2-版本回退"><a href="#2-版本回退" class="headerlink" title="2.版本回退"></a>2.版本回退</h3></li>
+<li>[$ git log –graph –pretty=oneline –abbrev-commit]            看提交的结构</li>
+</ul>
+<h3 id="2-版本回退"><a href="#2-版本回退" class="headerlink" title="2.版本回退"></a>2.版本回退</h3><ul>
 <li>[$ git reset –hard HEAD^]        版本回退到上一个版本</li>
 <li>[$ git reset –hard HEAD~n]        版本回退到第前n个版本</li>
 <li>[$ git reset –hard 版本commit id]    版本回退到指定的commit id号对应的版本</li>
 <li>[$ git checkout – <file>]             (注意:–很重要,必加.否则就成了改变分支)把工作区的文件内容修改全部取消,回退到最近的commit|add状态</file></li>
 <li>[$ git reset <head|head^|head~n> &lt;文件名&gt;]         把暂存区的指定的修改给移除</head|head^|head~n></li>
-<li>[$ git rm <file>]                                删除版本库里的文件,并且会把工作区的文件也删除<h3 id="3-与远程库建立连接"><a href="#3-与远程库建立连接" class="headerlink" title="3.与远程库建立连接"></a>3.与远程库建立连接</h3></file></li>
+<li>[$ git rm <file>]                                删除版本库里的文件,并且会把工作区的文件也删除</file></li>
+</ul>
+<h3 id="3-与远程库建立连接"><a href="#3-与远程库建立连接" class="headerlink" title="3.与远程库建立连接"></a>3.与远程库建立连接</h3><ul>
 <li>[$ git remote add &lt;自定义远程库名&gt; git@github.com:用户名/库名.git]        创建一个远程库连接点</li>
 <li>[$ git remote add &lt;自定义远程库名&gt; <a href="https://github.com/用户名/库名.git" target="_blank" rel="external">https://github.com/用户名/库名.git</a>]    创建一个远程库连接点,但每次都需要输账号密码</li>
 <li>[$ git remote -v]                                显示较详细远程信息</li>
-<li>[$ git remote]                                    显示简短的远程信息<h3 id="4-推送到远程库"><a href="#4-推送到远程库" class="headerlink" title="4.推送到远程库"></a>4.推送到远程库</h3></li>
+<li>[$ git remote]                                    显示简短的远程信息</li>
+</ul>
+<h3 id="4-推送到远程库"><a href="#4-推送到远程库" class="headerlink" title="4.推送到远程库"></a>4.推送到远程库</h3><ul>
 <li>[$ git push -u &lt;自定义远程库名&gt; 远程库的分支名]                                    把修改提交到远程服务器,第一次加一个-u参数</li>
-<li>[$ git push &lt;自定义远程库名&gt; 远程库的分支名]                                    把修改提交到远程服务器的对应分支<h3 id="5-从远程库拉取"><a href="#5-从远程库拉取" class="headerlink" title="5.从远程库拉取"></a>5.从远程库拉取</h3></li>
+<li>[$ git push &lt;自定义远程库名&gt; 远程库的分支名]                                    把修改提交到远程服务器的对应分支</li>
+</ul>
+<h3 id="5-从远程库拉取"><a href="#5-从远程库拉取" class="headerlink" title="5.从远程库拉取"></a>5.从远程库拉取</h3><ul>
 <li>[$ git pull –rebase &lt;自定义的远程库名&gt; &lt;分支名&gt;]                        从远程库里拉取内容</li>
-<li>[$ git pull]                            在已建立流桥梁的情况下,可以拉取远程的最新库<h3 id="6-从远程库克隆"><a href="#6-从远程库克隆" class="headerlink" title="6.从远程库克隆"></a>6.从远程库克隆</h3></li>
-<li>[$ git clone git@github.com:用户名/库名.git]                            从远程库克隆<h3 id="7-分支操作"><a href="#7-分支操作" class="headerlink" title="7.分支操作"></a>7.分支操作</h3></li>
+<li>[$ git pull]                            在已建立流桥梁的情况下,可以拉取远程的最新库</li>
+</ul>
+<h3 id="6-从远程库克隆"><a href="#6-从远程库克隆" class="headerlink" title="6.从远程库克隆"></a>6.从远程库克隆</h3><ul>
+<li>[$ git clone git@github.com:用户名/库名.git]                            从远程库克隆</li>
+</ul>
+<h3 id="7-分支操作"><a href="#7-分支操作" class="headerlink" title="7.分支操作"></a>7.分支操作</h3><ul>
 <li>[$ git branch]                                查看所有分支,当前分支前有一个*号</li>
 <li>[$ git branch &lt;分支名&gt;]                        创建一个新的分支                    </li>
 <li>[$ git branch -d &lt;分支名&gt;]                    删除一个分支</li>
@@ -205,11 +219,15 @@
 <li>[$ git checkout &lt;分支名&gt;]                    转换分支,就是转换HEAD指针的指向</li>
 <li>[$ git checkout -b &lt;分支名&gt;]                创建一个新的分支并指向此分支</li>
 <li>[$ git merge &lt;分支名&gt;]                        在当前HEAD指向的分支里合并指定分支</li>
-<li>[$ git merge –no-ff -m “描述” &lt;分支名&gt;]                        融合分支但是不是快进模式,就是说显示分支的结构<h3 id="8-工作环境的存储与回复"><a href="#8-工作环境的存储与回复" class="headerlink" title="8.工作环境的存储与回复"></a>8.工作环境的存储与回复</h3></li>
+<li>[$ git merge –no-ff -m “描述” &lt;分支名&gt;]                        融合分支但是不是快进模式,就是说显示分支的结构</li>
+</ul>
+<h3 id="8-工作环境的存储与回复"><a href="#8-工作环境的存储与回复" class="headerlink" title="8.工作环境的存储与回复"></a>8.工作环境的存储与回复</h3><ul>
 <li>[$ git stash]                                                    会把当前的工作环境存储起来</li>
 <li>[$ git stash list]                                                查看已经存储的环境</li>
 <li>[$ git stash apply &lt;存储的工作环境序号&gt;]                        会把指定的工作环境恢复,同时还会比较冲突,但不会删除序号</li>
-<li>[$ git stash pop &lt;存储的工作环境序号&gt;]                            会把指定的工作环境恢复,同时还会比较冲突,同时删除序号                        <h3 id="9-tag标签定义版本"><a href="#9-tag标签定义版本" class="headerlink" title="9.tag标签定义版本"></a>9.tag标签定义版本</h3></li>
+<li>[$ git stash pop &lt;存储的工作环境序号&gt;]                            会把指定的工作环境恢复,同时还会比较冲突,同时删除序号    </li>
+</ul>
+<h3 id="9-tag标签定义版本"><a href="#9-tag标签定义版本" class="headerlink" title="9.tag标签定义版本"></a>9.tag标签定义版本</h3><ul>
 <li>[$ git tag <tag名> &lt;默认commit是HEAD&gt;]            在当前最近的一次提交下建立一个标签</tag名></li>
 <li>[$ git tag <tag名> commitId]                    在指定的提交位置建立一个标签</tag名></li>
 <li>[$ git tag -a <tag名> -m “描述” commitId]        在指定的提交位置建立一个标签,并加上描述信息和名字</tag名></li>
@@ -220,7 +238,9 @@
 <li>[$ git push origin –tags]                        把未提交的标签全部推送到远程</li>
 <li>[$ git tag -d <tag名>]                            删除标签</tag名></li>
 <li>[$ git push origin :refs/tags/<tag名>]            在远程删除一个标签,注:必须先在本地删除标签</tag名></li>
-<li>[$ git add -f &lt;文件名&gt;]                            强行加入一个被忽视的文件到暂存区<h3 id="10-自定义git-原来的仍然可用"><a href="#10-自定义git-原来的仍然可用" class="headerlink" title="10.自定义git(原来的仍然可用)"></a>10.自定义git(原来的仍然可用)</h3></li>
+<li>[$ git add -f &lt;文件名&gt;]                            强行加入一个被忽视的文件到暂存区</li>
+</ul>
+<h3 id="10-自定义git-原来的仍然可用"><a href="#10-自定义git-原来的仍然可用" class="headerlink" title="10.自定义git(原来的仍然可用)"></a>10.自定义git(原来的仍然可用)</h3><ul>
 <li>[$ git config –global alias.&lt;指令的代替名&gt; 被代替的指令]     简化一个指令,相当于加了一个快捷键,原来的依然能用</li>
 <li>[$ git config –global color.ui true]  让git显示颜色</li>
 <li>[$ git config –global alias.st status] 将status配置出另一名字st[$git st] </li>
@@ -414,7 +434,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">致谢</a></li>
       
         
       
@@ -447,15 +467,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">开源小项目</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
             <div class="clearfix"></div>
