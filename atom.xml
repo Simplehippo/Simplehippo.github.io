@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-12T07:55:19.057Z</updated>
+  <updated>2017-07-12T07:59:51.503Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,14 +20,15 @@
     <link href="http://yoursite.com/2017/07/12/java%E8%8E%B7%E5%8F%96%E6%9C%AC%E6%9C%BA%E5%B1%80%E5%9F%9F%E7%BD%91IP/"/>
     <id>http://yoursite.com/2017/07/12/java获取本机局域网IP/</id>
     <published>2017-07-12T07:42:34.000Z</published>
-    <updated>2017-07-12T07:55:19.057Z</updated>
+    <updated>2017-07-12T07:59:51.503Z</updated>
     
     <content type="html"><![CDATA[<h1 id="1-java获取本机局域网IP的方法"><a href="#1-java获取本机局域网IP的方法" class="headerlink" title="1.java获取本机局域网IP的方法"></a>1.java获取本机局域网IP的方法</h1><h3 id="java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。"><a href="#java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。" class="headerlink" title="java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。"></a>java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。</h3><ul>
 <li>例如：<ul>
 <li>System.out.println(“my IP is: “+InetAddress.getLocalHost().getHostAddress());</li>
 </ul>
 </li>
-<li>对于通过网关上网（如路由器设备），上述方法则是无效的。</li>
+<li>对于通过网关上网（如路由器设备），上述方法则是无效的。<br><a id="more"></a>
+</li>
 </ul>
 <h1 id="2-获取公网IP的思路"><a href="#2-获取公网IP的思路" class="headerlink" title="2.获取公网IP的思路"></a>2.获取公网IP的思路</h1><ul>
 <li>1.调用操作系统命令（如windows下的ipconfig /all)；(未验证)</li>
@@ -47,7 +48,12 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;1-java获取本机局域网IP的方法&quot;&gt;&lt;a href=&quot;#1-java获取本机局域网IP的方法&quot; class=&quot;headerlink&quot; title=&quot;1.java获取本机局域网IP的方法&quot;&gt;&lt;/a&gt;1.java获取本机局域网IP的方法&lt;/h1&gt;&lt;h3 id=&quot;j
+      &lt;h1 id=&quot;1-java获取本机局域网IP的方法&quot;&gt;&lt;a href=&quot;#1-java获取本机局域网IP的方法&quot; class=&quot;headerlink&quot; title=&quot;1.java获取本机局域网IP的方法&quot;&gt;&lt;/a&gt;1.java获取本机局域网IP的方法&lt;/h1&gt;&lt;h3 id=&quot;java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。&quot;&gt;&lt;a href=&quot;#java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。&quot; class=&quot;headerlink&quot; title=&quot;java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。&quot;&gt;&lt;/a&gt;java的网络类可以获取本机IP，但是，获取的IP是本机的局域网IP，而不是公网IP。&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;例如：&lt;ul&gt;
+&lt;li&gt;System.out.println(“my IP is: “+InetAddress.getLocalHost().getHostAddress());&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;对于通过网关上网（如路由器设备），上述方法则是无效的。&lt;br&gt;
     
     </summary>
     
@@ -65,23 +71,25 @@
     <link href="http://yoursite.com/2017/07/12/Mysql%E5%AD%98%E5%82%A8java%E5%AF%B9%E8%B1%A1/"/>
     <id>http://yoursite.com/2017/07/12/Mysql存储java对象/</id>
     <published>2017-07-12T07:38:48.000Z</published>
-    <updated>2017-07-12T07:42:12.009Z</updated>
+    <updated>2017-07-12T08:07:49.672Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Mysql存储java对象"><a href="#Mysql存储java对象" class="headerlink" title="Mysql存储java对象"></a>Mysql存储java对象</h2><h3 id="MySQL-设置字段为-blob"><a href="#MySQL-设置字段为-blob" class="headerlink" title="MySQL  设置字段为 blob"></a>MySQL  设置字段为 blob</h3><ul>
-<li>保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes)<ul>
-<li>`<br>  ByteArrayOutputStream baos = new ByteArrayOutputStream();<br>  ObjectOutputStream out = null;<br>  try {       <pre><code>out = new ObjectOutputStream(baos);       
-out.writeObject(java实例对象);        
+    <content type="html"><![CDATA[<h3 id="MySQL-设置字段为-blob"><a href="#MySQL-设置字段为-blob" class="headerlink" title="MySQL  设置字段为 blob"></a>MySQL  设置字段为 blob</h3><ul>
+<li><p>保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes)<br><a id="more"></a></p>
+<ul>
+<li>  ByteArrayOutputStream baos = new ByteArrayOutputStream();<br>  ObjectOutputStream out = null;<br>  try {       <pre><code>out = new ObjectOutputStream(baos);       
+out.writeObject(java实例对象);     
 </code></pre>  } catch (IOException e) {       <pre><code>logger.error(&quot;msg2Bytes error!&quot;, e);     
 </code></pre>  }finally{       <pre><code>try {         
     out.close();       
 } catch (IOException e) {         
     logger.error(&quot;msg2Bytes error!&quot;, e);       
 }     
-</code></pre>  }<br>  return baos.toByteArray();<br>`</li>
+</code></pre>  }<br>  return baos.toByteArray(); </li>
 </ul>
 </li>
-<li>获取对象 使用getBytes()，将获取的byte[]反序列化为Java 对象<ul>
-<li>`<br>  ByteArrayInputStream bais;<br>  ObjectInputStream in = null;<br>  try{       <pre><code>bais = new ByteArrayInputStream(bytes);       
+<li><p>获取对象 使用getBytes()，将获取的byte[]反序列化为Java 对象</p>
+<ul>
+<li>  ByteArrayInputStream bais;<br>  ObjectInputStream in = null;<br>  try{       <pre><code>bais = new ByteArrayInputStream(bytes);       
 in = new ObjectInputStream(bais);         
 return (java类)in.readObject();     
 </code></pre>  }finally{       <pre><code>if(in != null){         
@@ -91,7 +99,7 @@ return (java类)in.readObject();
         logger.error(&quot;bytes2Msg error!&quot;, e);         
     }       
 }     
-</code></pre>  }<br>`</li>
+</code></pre>  } </li>
 </ul>
 </li>
 </ul>
@@ -110,7 +118,8 @@ return (java类)in.readObject();
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Mysql存储java对象&quot;&gt;&lt;a href=&quot;#Mysql存储java对象&quot; class=&quot;headerlink&quot; title=&quot;Mysql存储java对象&quot;&gt;&lt;/a&gt;Mysql存储java对象&lt;/h2&gt;&lt;h3 id=&quot;MySQL-设置字段为-blob&quot;&gt;&lt;a 
+      &lt;h3 id=&quot;MySQL-设置字段为-blob&quot;&gt;&lt;a href=&quot;#MySQL-设置字段为-blob&quot; class=&quot;headerlink&quot; title=&quot;MySQL  设置字段为 blob&quot;&gt;&lt;/a&gt;MySQL  设置字段为 blob&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes)&lt;br&gt;
     
     </summary>
     
@@ -126,7 +135,7 @@ return (java类)in.readObject();
     <link href="http://yoursite.com/2017/07/12/junit%E5%88%9D%E5%AD%A6%E8%AE%B0%E5%BD%95/"/>
     <id>http://yoursite.com/2017/07/12/junit初学记录/</id>
     <published>2017-07-12T07:24:23.000Z</published>
-    <updated>2017-07-12T07:56:57.261Z</updated>
+    <updated>2017-07-12T08:06:24.252Z</updated>
     
     <content type="html"><![CDATA[<h2 id="需要在开始的时候创建一个被测试类的实例"><a href="#需要在开始的时候创建一个被测试类的实例" class="headerlink" title="需要在开始的时候创建一个被测试类的实例"></a>需要在开始的时候创建一个被测试类的实例</h2><h3 id="Test"><a href="#Test" class="headerlink" title="@Test"></a>@Test</h3><ul>
 <li>测试的注解<br>有限制:方法必须返回void,并且方法不能有参数<h5 id="扩展"><a href="#扩展" class="headerlink" title="扩展:"></a>扩展:</h5></li>
@@ -134,37 +143,23 @@ return (java类)in.readObject();
 <li>@Test(timeout = 2000)   限时2秒</li>
 </ul>
 </li>
-<li>2.可以测试异常<ul>
-<li>`@Test( expected = ArithmeticException.class)<br> public void testDivide() {<pre><code>c.divide(0);
-</code></pre>}`</li>
-</ul>
-</li>
+<li>2.可以测试异常<br><a id="more"></a>
+  `@Test( expected = ArithmeticException.class)<pre><code>public void testDivide() {
+        c.divide(0);
+</code></pre>  }`</li>
 </ul>
 <h3 id="Before"><a href="#Before" class="headerlink" title="@Before"></a>@Before</h3><ul>
 <li>在所有的Test注解标志的单元测试之前执行<br>但是,除首次生成的@Before注解的方法外,<br>其他的@Before注解的方法是按照修改顺序反向执行,</li>
 <li><p>例如:</p>
 <ul>
 <li>执行结果:   0 3 2 1</li>
-<li><p><code>@Before
-public void setUp3() throws Exception {
-  System.out.println(&quot;3&quot;);
-}</code></p>
+<li><p>@Before<br>public void setUp3() throws Exception {<br>  System.out.println(“3”);<br>}</p>
 </li>
-<li><p><code>@Before
-public void setUp1() throws Exception {
-  System.out.println(&quot;1&quot;);
-}</code></p>
+<li><p>@Before<br>public void setUp1() throws Exception {<br>  System.out.println(“1”);<br>}</p>
 </li>
-<li><p><code>@Before
-public void setUp() throws Exception {
-  System.out.println(&quot;0&quot;);
-  c.clear();
-}</code></p>
+<li><p>@Before<br>public void setUp() throws Exception {<br>  System.out.println(“0”);<br>  c.clear();<br>}</p>
 </li>
-<li><p><code>@Before
-public void setUp2() throws Exception {
-  System.out.println(&quot;2&quot;);
-}</code></p>
+<li><p>@Before<br>public void setUp2() throws Exception {<br>  System.out.println(“2”);<br>}</p>
 </li>
 </ul>
 </li>
@@ -212,69 +207,78 @@ public void setUp2() throws Exception {
 </ul>
 </li>
 </ul>
-<h3 id="RunWith-Parameterized-class"><a href="#RunWith-Parameterized-class" class="headerlink" title="@RunWith(Parameterized. class )"></a>@RunWith(Parameterized. class )</h3><p>`<br> public   class  SquareTest  {</p>
-<pre><code> private   static  Calculator calculator  =   new  Calculator();
+<h3 id="RunWith-Parameterized-class"><a href="#RunWith-Parameterized-class" class="headerlink" title="@RunWith(Parameterized. class )"></a>@RunWith(Parameterized. class )</h3><pre><code>public   class  SquareTest  {
 
- private   int  param;
+  private   static  Calculator calculator  =   new  Calculator();
 
- private   int  result;
+  private   int  param;
 
-
-
-@Parameters
-
- public   static  Collection data()  {
-
-     return  Arrays.asList( new  Object[][] {
-
-             { 2 ,  4 } ,
-
-             { 0 ,  0 } ,
-
-             {－ 3 ,  9 } ,
-
-    } );
-
-} 
-</code></pre><p> // 构造函数，对变量进行初始化 </p>
-<pre><code> public  SquareTest( int  param,  int  result)  {
-
-     this .param  =  param;
-
-     this .result  =  result;
-
-} 
+  private   int  result;
 
 
 
-@Test
+ @Parameters
 
- public   void  square()  {
+  public   static  Collection data()  {
 
-    calculator.square(param);
+      return  Arrays.asList( new  Object[][] {
 
-    assertEquals(result, calculator.getResult());
+              { 2 ,  4 } ,
 
-}
-</code></pre><p> }<br>`</p>
-<h3 id="打包测试"><a href="#打包测试" class="headerlink" title="打包测试:"></a>打包测试:</h3><h4 id="具体做法-1"><a href="#具体做法-1" class="headerlink" title="具体做法:"></a>具体做法:</h4><ul>
+              { 0 ,  0 } ,
+
+              {－ 3 ,  9 } ,
+
+     } );
+
+ } 
+
+         // 构造函数，对变量进行初始化 
+
+      public  SquareTest( int  param,  int  result)  {
+
+          this .param  =  param;
+
+          this .result  =  result;
+
+     } 
+
+
+
+     @Test
+
+      public   void  square()  {
+
+         calculator.square(param);
+
+         assertEquals(result, calculator.getResult());
+
+     }
+
+ } 
+</code></pre><h3 id="打包测试"><a href="#打包测试" class="headerlink" title="打包测试:"></a>打包测试:</h3><h4 id="具体做法-1"><a href="#具体做法-1" class="headerlink" title="具体做法:"></a>具体做法:</h4><ul>
 <li>1.运行器:Suite.class<ul>
 <li>@RunWith(Suite.class)</li>
 </ul>
 </li>
-<li>2.打包的类作为参数传递进去,结尾不加;   这只是个注解<br>  `@Suite.SuiteClasses({<pre><code>xx.class,
+<li>2.打包的类作为参数传递进去,结尾不加;<br>  这只是个注解<br>  @Suite.SuiteClasses({<pre><code>xx.class,
 xx.class
-</code></pre>  })`</li>
-<li>3.随便起个类名,内容为空即可<br>  <code>public class xxx {}</code><h4 id="实例"><a href="#实例" class="headerlink" title="实例:"></a>实例:</h4>`@RunWith(Suite. class )<br>@Suite.SuiteClasses( {<pre><code>CalculatorTest. class ,
+</code></pre>  })</li>
+<li>3.随便起个类名,内容为空即可<br>  public class xxx {}<h4 id="实例"><a href="#实例" class="headerlink" title="实例:"></a>实例:</h4>  @RunWith(Suite. class )<br>  @Suite.SuiteClasses( {<pre><code>CalculatorTest. class ,
 SquareTest. class 
-} )
-</code></pre>public   class  AllCalculatorTests  {<br>} `</li>
+</code></pre>   } )<br>   public   class  AllCalculatorTests  {<br>   } </li>
 </ul>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;需要在开始的时候创建一个被测试类的实例&quot;&gt;&lt;a href=&quot;#需要在开始的时候创建一个被测试类的实例&quot; class=&quot;headerlink&quot; title=&quot;需要在开始的时候创建一个被测试类的实例&quot;&gt;&lt;/a&gt;需要在开始的时候创建一个被测试类的实例&lt;/h2&gt;&lt;h3 i
+      &lt;h2 id=&quot;需要在开始的时候创建一个被测试类的实例&quot;&gt;&lt;a href=&quot;#需要在开始的时候创建一个被测试类的实例&quot; class=&quot;headerlink&quot; title=&quot;需要在开始的时候创建一个被测试类的实例&quot;&gt;&lt;/a&gt;需要在开始的时候创建一个被测试类的实例&lt;/h2&gt;&lt;h3 id=&quot;Test&quot;&gt;&lt;a href=&quot;#Test&quot; class=&quot;headerlink&quot; title=&quot;@Test&quot;&gt;&lt;/a&gt;@Test&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;测试的注解&lt;br&gt;有限制:方法必须返回void,并且方法不能有参数&lt;h5 id=&quot;扩展&quot;&gt;&lt;a href=&quot;#扩展&quot; class=&quot;headerlink&quot; title=&quot;扩展:&quot;&gt;&lt;/a&gt;扩展:&lt;/h5&gt;&lt;/li&gt;
+&lt;li&gt;1.可以加入限时:&lt;ul&gt;
+&lt;li&gt;@Test(timeout = 2000)   限时2秒&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2.可以测试异常&lt;br&gt;
     
     </summary>
     
@@ -290,13 +294,13 @@ SquareTest. class
     <link href="http://yoursite.com/2017/07/12/eclipse%E6%9B%B4%E6%94%B9tab%E4%B8%BA%E7%A9%BA%E6%A0%BC/"/>
     <id>http://yoursite.com/2017/07/12/eclipse更改tab为空格/</id>
     <published>2017-07-12T07:17:09.000Z</published>
-    <updated>2017-07-12T07:23:50.334Z</updated>
+    <updated>2017-07-12T08:07:01.283Z</updated>
     
     <content type="html"><![CDATA[<h2 id="更改缩进"><a href="#更改缩进" class="headerlink" title="更改缩进"></a>更改缩进</h2><ul>
 <li>1.Window ——&gt; Preferences…… ——&gt; Java ——&gt; Code Style ——&gt; Formatter</li>
 <li>2.点右边的“Edit……”按钮，切换到第一个选项卡“Indentation”</li>
 <li>3.在 General settings 组将 Tab policy 由 Table only 改为 Space only，同时把 Indentation size 和 Tab size 改为 4</li>
-<li>4.最后把最上面的 Profile name 取一个名字，名字任意，再点 OK 按钮就可以了。<h2 id="以后按-Tab-键或者-Ctrl-Shift-F-会自动采用-4-个空格作为一个层次的缩进。"><a href="#以后按-Tab-键或者-Ctrl-Shift-F-会自动采用-4-个空格作为一个层次的缩进。" class="headerlink" title="以后按 Tab 键或者 Ctrl + Shift + F 会自动采用 4 个空格作为一个层次的缩进。"></a>以后按 Tab 键或者 Ctrl + Shift + F 会自动采用 4 个空格作为一个层次的缩进。</h2></li>
+<li>4.最后把最上面的 Profile name 取一个名字，名字任意，再点 OK 按钮就可以了。<h4 id="以后按-Tab-键或者-Ctrl-Shift-F-会自动采用-4-个空格作为一个层次的缩进。"><a href="#以后按-Tab-键或者-Ctrl-Shift-F-会自动采用-4-个空格作为一个层次的缩进。" class="headerlink" title="以后按 Tab 键或者 Ctrl + Shift + F 会自动采用 4 个空格作为一个层次的缩进。"></a>以后按 Tab 键或者 Ctrl + Shift + F 会自动采用 4 个空格作为一个层次的缩进。</h4></li>
 </ul>
 ]]></content>
     
@@ -570,11 +574,11 @@ p{
   </entry>
   
   <entry>
-    <title>坦克大战</title>
-    <link href="http://yoursite.com/2017/07/12/%E5%9D%A6%E5%85%8B%E5%A4%A7%E6%88%98/"/>
-    <id>http://yoursite.com/2017/07/12/坦克大战/</id>
+    <title>tankWar</title>
+    <link href="http://yoursite.com/2017/07/12/tankWar/"/>
+    <id>http://yoursite.com/2017/07/12/tankWar/</id>
     <published>2017-07-12T02:58:14.000Z</published>
-    <updated>2017-07-12T07:57:08.435Z</updated>
+    <updated>2017-07-12T07:59:01.150Z</updated>
     
     <content type="html"><![CDATA[<h2 id="简要介绍"><a href="#简要介绍" class="headerlink" title="简要介绍:"></a>简要介绍:</h2><ul>
 <li>只是一个比较简陋的游戏,目前是初代版本,以后看心情更新吧.</li>

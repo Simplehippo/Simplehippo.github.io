@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Mysql存储java对象 | 杨育才的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Mysql存储java对象MySQL  设置字段为 blob 保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes) `  ByteArrayOutputStream baos = new ByteArrayOutputStream();  ObjectOutputStream out = null;  try {       out = new Objec">
+  <meta name="description" content="MySQL  设置字段为 blob 保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes)">
 <meta name="keywords" content="mysql,java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mysql存储java对象">
 <meta property="og:url" content="http://yoursite.com/2017/07/12/Mysql存储java对象/index.html">
 <meta property="og:site_name" content="杨育才的个人博客">
-<meta property="og:description" content="Mysql存储java对象MySQL  设置字段为 blob 保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes) `  ByteArrayOutputStream baos = new ByteArrayOutputStream();  ObjectOutputStream out = null;  try {       out = new Objec">
-<meta property="og:updated_time" content="2017-07-12T07:42:12.009Z">
+<meta property="og:description" content="MySQL  设置字段为 blob 保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes)">
+<meta property="og:updated_time" content="2017-07-12T08:07:49.672Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mysql存储java对象">
-<meta name="twitter:description" content="Mysql存储java对象MySQL  设置字段为 blob 保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes) `  ByteArrayOutputStream baos = new ByteArrayOutputStream();  ObjectOutputStream out = null;  try {       out = new Objec">
+<meta name="twitter:description" content="MySQL  设置字段为 blob 保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes)">
   
     <link rel="alternative" href="/atom.xml" title="杨育才的个人博客" type="application/atom+xml">
   
@@ -164,21 +164,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Mysql存储java对象"><a href="#Mysql存储java对象" class="headerlink" title="Mysql存储java对象"></a>Mysql存储java对象</h2><h3 id="MySQL-设置字段为-blob"><a href="#MySQL-设置字段为-blob" class="headerlink" title="MySQL  设置字段为 blob"></a>MySQL  设置字段为 blob</h3><ul>
-<li>保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes)<ul>
-<li>`<br>  ByteArrayOutputStream baos = new ByteArrayOutputStream();<br>  ObjectOutputStream out = null;<br>  try {       <pre><code>out = new ObjectOutputStream(baos);       
-out.writeObject(java实例对象);        
+        <h3 id="MySQL-设置字段为-blob"><a href="#MySQL-设置字段为-blob" class="headerlink" title="MySQL  设置字段为 blob"></a>MySQL  设置字段为 blob</h3><ul>
+<li><p>保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes)<br><a id="more"></a></p>
+<ul>
+<li>  ByteArrayOutputStream baos = new ByteArrayOutputStream();<br>  ObjectOutputStream out = null;<br>  try {       <pre><code>out = new ObjectOutputStream(baos);       
+out.writeObject(java实例对象);     
 </code></pre>  } catch (IOException e) {       <pre><code>logger.error(&quot;msg2Bytes error!&quot;, e);     
 </code></pre>  }finally{       <pre><code>try {         
     out.close();       
 } catch (IOException e) {         
     logger.error(&quot;msg2Bytes error!&quot;, e);       
 }     
-</code></pre>  }<br>  return baos.toByteArray();<br>`</li>
+</code></pre>  }<br>  return baos.toByteArray(); </li>
 </ul>
 </li>
-<li>获取对象 使用getBytes()，将获取的byte[]反序列化为Java 对象<ul>
-<li>`<br>  ByteArrayInputStream bais;<br>  ObjectInputStream in = null;<br>  try{       <pre><code>bais = new ByteArrayInputStream(bytes);       
+<li><p>获取对象 使用getBytes()，将获取的byte[]反序列化为Java 对象</p>
+<ul>
+<li>  ByteArrayInputStream bais;<br>  ObjectInputStream in = null;<br>  try{       <pre><code>bais = new ByteArrayInputStream(bytes);       
 in = new ObjectInputStream(bais);         
 return (java类)in.readObject();     
 </code></pre>  }finally{       <pre><code>if(in != null){         
@@ -188,7 +190,7 @@ return (java类)in.readObject();
         logger.error(&quot;bytes2Msg error!&quot;, e);         
     }       
 }     
-</code></pre>  }<br>`</li>
+</code></pre>  } </li>
 </ul>
 </li>
 </ul>
@@ -432,6 +434,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">net</a>
               </li>
              
@@ -440,15 +446,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">开源小项目</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">junit</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color1">开源小项目</a>
               </li>
             
             <div class="clearfix"></div>
