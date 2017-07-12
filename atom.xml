@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-12T05:40:29.252Z</updated>
+  <updated>2017-07-12T05:45:12.163Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/07/12/css%E8%AE%B0%E5%BD%95/"/>
     <id>http://yoursite.com/2017/07/12/css记录/</id>
     <published>2017-07-12T04:52:43.517Z</published>
-    <updated>2017-07-12T05:40:29.252Z</updated>
+    <updated>2017-07-12T05:45:12.163Z</updated>
     
     <content type="html"><![CDATA[<ul>
 <li>date: 2017-07-12 10:58:14</li>
@@ -67,41 +67,42 @@
 <li><code>&lt;label for=&quot;所关联控件的id值&quot;&gt;</code>显示的内容<code>&lt;/label&gt;</code><br>每个表单都有个id,用于前端自己来识别的. <h1 id="CSS开始"><a href="#CSS开始" class="headerlink" title="CSS开始"></a>CSS开始</h1><h3 id="内联式"><a href="#内联式" class="headerlink" title="内联式"></a>内联式</h3></li>
 <li><code>&lt;xx  style=&quot;语句&quot;&gt;&lt;/xx&gt;</code>         <h3 id="嵌入式-一般在-lt-head-gt-标签的域内"><a href="#嵌入式-一般在-lt-head-gt-标签的域内" class="headerlink" title="嵌入式(一般在&lt;head&gt;标签的域内)"></a>嵌入式(一般在<code>&lt;head&gt;</code>标签的域内)</h3></li>
 <li><code>&lt;style type=&quot;text/css&quot;&gt;</code><br><code>xx{
-   代码
+  ...
 }</code><br><code>&lt;/style&gt;</code><h3 id="外部式-写在-lt-head-gt-标签的域内的-lt-link-gt-标签中"><a href="#外部式-写在-lt-head-gt-标签的域内的-lt-link-gt-标签中" class="headerlink" title="外部式(写在&lt;head&gt;标签的域内的&lt;link&gt;标签中)"></a>外部式(写在<code>&lt;head&gt;</code>标签的域内的<code>&lt;link&gt;</code>标签中)</h3></li>
 <li><code>&lt;link href=&quot;目标css文件&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;</code><h2 id="进入大选择器时代"><a href="#进入大选择器时代" class="headerlink" title="进入大选择器时代"></a>进入大选择器时代</h2><h4 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h4></li>
-<li>标签名{<pre><code>代码
-</code></pre>}<h4 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h4></li>
-<li>1.先创建一个css的类选择器(以’.’开头)<br>.起名{<pre><code>代码
-</code></pre>}</li>
+<li>标签名{<br>  …<br>}<h4 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h4></li>
+<li>1.先创建一个css的类选择器(以’.’开头)<br>.起名{<br>  …<br>}</li>
 <li>2.在标签中使用<br>例:<code>&lt;span class=&quot;起的名字&quot;&gt;示例&lt;/span&gt;</code><h4 id="ID选择器"><a href="#ID选择器" class="headerlink" title="ID选择器"></a>ID选择器</h4></li>
 <li>1.创建一个ID选择器<br><code># 目标ID名{
-   代码
+  ...
 }</code></li>
 <li>2.使用<br>例:<code>&lt;span  id=&quot;目标ID名&quot;&gt;示例&lt;/span&gt;</code><h4 id="类和ID选择器的区别"><a href="#类和ID选择器的区别" class="headerlink" title="类和ID选择器的区别"></a>类和ID选择器的区别</h4></li>
 <li>1.ID选择器只能在文档中使用一次。与类选择器不同，在一个HTML文档中，ID选择器只能使用一次，而且仅一次。而类选择器可以使用多次。</li>
 <li>2.可以使用类选择器词列表方法为一个元素同时设置多个样式。不能使用 ID 词列表(例:<code>&lt;span class=&quot;stress setBig&quot;&gt;</code> 这是对的,但是<code>&lt;span id=&quot;stressId setBigId&quot;&gt;</code> 这是错的)<h4 id="子选择器"><a href="#子选择器" class="headerlink" title="子选择器"></a>子选择器</h4></li>
-<li>1.创建子选择器<br>.父名(随意起名,也可以是一个标签) &gt; 子标签名{<pre><code>代码
-</code></pre>}</li>
+<li>1.创建子选择器<br>. 父名(随意起名,也可以是一个标签) &gt; 子标签名{<br>  …<br>}</li>
 <li>2.使用<br>例:<code>&lt;p class=&quot;父名(类似于类选择器的扩展)&quot;&gt;&lt;span&gt;子&lt;span&gt;孙类&lt;/span&gt;     类&lt;/span&gt;&lt;span&gt;子类&lt;/span&gt;</code></li>
 <li>3.注意<br>只会作用于直接子类,孙子级或更深则不作用.<h4 id="包含选择器-基本类似于子选择器-注意空格区别-我认为可以理解为强化版的子选择器"><a href="#包含选择器-基本类似于子选择器-注意空格区别-我认为可以理解为强化版的子选择器" class="headerlink" title="包含选择器(基本类似于子选择器,注意空格区别)(我认为可以理解为强化版的子选择器)"></a>包含选择器(基本类似于子选择器,注意空格区别)(我认为可以理解为强化版的子选择器)</h4></li>
-<li>1.创建包含选择器<br>.父类名’空格’子标签名{<br>  代码<br>}</li>
+<li>1.创建包含选择器<br>. 父类名 ‘空格’ 子标签名{<br>  …<br>}</li>
 <li>2.使用<br>与子选择器类似,仅有一点区别:父类的所有子孙级全受到CSS效果的作用.<h4 id="通用选择器"><a href="#通用选择器" class="headerlink" title="通用选择器"></a>通用选择器</h4></li>
 <li>作用:<br>会匹配所有的html的标签.</li>
 <li>格式<br><code>*{xx}</code><h4 id="伪类选择符"><a href="#伪类选择符" class="headerlink" title="伪类选择符"></a>伪类选择符</h4></li>
-<li>格式<br><code>标签名:对标签的行为操作{CSS样式代码;}</code></li>
+<li>格式<br><code>标签名:对标签的行为操作{CSS样式...;}</code></li>
 <li>注意(目前只有下面的实例的兼容性最好,伪类选择符有很多…)<br>例:<code>a:hover{
   color:red;
-  代码
+  ...
 }</code><h4 id="分组选择符"><a href="#分组选择符" class="headerlink" title="分组选择符"></a>分组选择符</h4></li>
-<li>例1:<br><code>h1,span{CSS样式代码}</code>相当于<code>h1{xx}   span{xx}</code></li>
+<li>例1:<br><code>h1,span{CSS样式...}</code>相当于<code>h1{xx}   span{xx}</code></li>
 <li>例2:<br><code>.first,#second{}</code><h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4></li>
 <li>例:<br><code>p{xxx}</code><br><code>&lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;/p&gt;</code></li>
 <li>特殊性(权值优先级问题)(当对同一内容做相同类型操作是就会涉及到权值比较)<br> ID选择符(最高100) &gt; 类选择符(10) &gt; 标签(1) &gt; 继承(0.1)</li>
 <li>层叠(相同权值,相同类型)<br>1.后 &gt; 前   (前面的被后面所覆盖)<br>2.内联式 &gt; 入式 &gt; 外部式<h4 id="重要性-为低权值设置成高权值"><a href="#重要性-为低权值设置成高权值" class="headerlink" title="重要性(为低权值设置成高权值)"></a>重要性(为低权值设置成高权值)</h4></li>
 <li>格式:<br><code>!important</code></li>
-<li>例:<br><code>p{color:red !important;}
-p{color:blue;}</code><br>显示的是红色.<h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><h3 id="盒子的边界-border"><a href="#盒子的边界-border" class="headerlink" title="盒子的边界(border)"></a>盒子的边界(border)</h3><code>p{
+<li>例:<br><code>p{
+  color:red !important;
+}
+p{
+  color:blue;
+}</code><br>显示的是红色.<h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><h3 id="盒子的边界-border"><a href="#盒子的边界-border" class="headerlink" title="盒子的边界(border)"></a>盒子的边界(border)</h3><code>p{
   border:宽度 样式 颜色;
 }</code><br><code>p{
   border-width:thin/medium/thick/像素;
@@ -134,7 +135,7 @@ p{color:blue;}</code><br>显示的是红色.<h2 id="盒子模型"><a href="#盒�
 <li>3.固定定位<br>相对于视图,拖动滚动条位置不会改变.类似于网页上的小浮窗<h5 id="绝对-相对定位结合-据父定子"><a href="#绝对-相对定位结合-据父定子" class="headerlink" title="绝对,相对定位结合(据父定子)"></a>绝对,相对定位结合(据父定子)</h5></li>
 <li>1.参照定位必须是目标定位的父辈</li>
 <li>2.参照的父级必须是   <code>position:relative;</code></li>
-<li>3.子级的定位必须是   <code>position:absolute;   (top:xx;   xxxx;)</code><h3 id="长度单位"><a href="#长度单位" class="headerlink" title="长度单位"></a>长度单位</h3>当给 font-size 设置单位为 em (%同理)时，此时计算的标准以 p 的父元素的 font-size 为基础。<br>如下代码：<br><code>&lt;p&gt;以这个&lt;span&gt;例子&lt;/span&gt;为例。&lt;/p&gt;</code><br><code>p{font-size:14px}</code><br><code>span{font-size:0.8em;}</code><br>结果 span 中的字体“例子”字体大小就为 11.2px（14 * 0.8 = 11.2px）。</li>
+<li>3.子级的定位必须是   <code>position:absolute;   (top:xx;   xxxx;)</code><h3 id="长度单位"><a href="#长度单位" class="headerlink" title="长度单位"></a>长度单位</h3>当给 font-size 设置单位为 em (%同理)时，此时计算的标准以 p 的父元素的 font-size 为基础。<br>如下…：<br><code>&lt;p&gt;以这个&lt;span&gt;例子&lt;/span&gt;为例。&lt;/p&gt;</code><br><code>p{font-size:14px}</code><br><code>span{font-size:0.8em;}</code><br>结果 span 中的字体“例子”字体大小就为 11.2px（14 * 0.8 = 11.2px）。</li>
 </ul>
 ]]></content>
     
