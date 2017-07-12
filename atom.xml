@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-12T05:29:08.061Z</updated>
+  <updated>2017-07-12T05:36:09.624Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/07/12/css%E8%AE%B0%E5%BD%95/"/>
     <id>http://yoursite.com/2017/07/12/css记录/</id>
     <published>2017-07-12T04:52:43.517Z</published>
-    <updated>2017-07-12T05:29:08.061Z</updated>
+    <updated>2017-07-12T05:36:09.624Z</updated>
     
     <content type="html"><![CDATA[<ul>
 <li>date: 2017-07-12 10:58:14</li>
@@ -31,7 +31,10 @@
 <li><code>&lt;pre&gt;</code> 添加预格式化的文本,如代码</li>
 <li><code>&lt;code&gt;</code> 一行</li>
 <li><code>&lt;br /&gt;</code> 换行</li>
-<li><code>&lt;hx&gt;</code>(x=1,2,3,4,5,6) 文本标题<a id="more"></a></li>
+<li><code>&lt;hx&gt;</code>(x=1,2,3,4,5,6) 文本标题</li>
+</ul>
+<a id="more"></a>
+<ul>
 <li><code>&lt;q&gt;</code> 短文本引用</li>
 <li><code>&lt;blockquote&gt;</code> 长文本引用</li>
 <li><code>&lt;address&gt;</code>  地址(强调)</li>
@@ -147,7 +150,8 @@
 &lt;li&gt;&lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt; 添加预格式化的文本,如代码&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt; 一行&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&amp;lt;br /&amp;gt;&lt;/code&gt; 换行&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;hx&amp;gt;&lt;/code&gt;(x=1,2,3,4,5,6) 文本标题
+&lt;li&gt;&lt;code&gt;&amp;lt;hx&amp;gt;&lt;/code&gt;(x=1,2,3,4,5,6) 文本标题&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
