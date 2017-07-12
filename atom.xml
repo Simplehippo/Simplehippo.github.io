@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-11T20:17:43.353Z</updated>
+  <updated>2017-07-12T04:21:51.852Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,10 @@
     <link href="http://yoursite.com/2017/07/12/tankWar/"/>
     <id>http://yoursite.com/2017/07/12/tankWar/</id>
     <published>2017-07-11T19:49:45.816Z</published>
-    <updated>2017-07-11T20:17:43.353Z</updated>
+    <updated>2017-07-12T04:21:51.852Z</updated>
     
-    <content type="html"><![CDATA[<ul>
+    <content type="html"><![CDATA[<h1 id="tankWar"><a href="#tankWar" class="headerlink" title="tankWar"></a>tankWar</h1><hr>
+<h2 id="title-tankWar"><a href="#title-tankWar" class="headerlink" title="title:tankWar"></a>title:tankWar</h2><h2 id="简要介绍"><a href="#简要介绍" class="headerlink" title="简要介绍:"></a>简要介绍:</h2><ul>
 <li>只是一个比较简陋的游戏,目前是初代版本,以后看心情更新吧.</li>
 </ul>
 <h2 id="游戏说明"><a href="#游戏说明" class="headerlink" title="游戏说明:"></a>游戏说明:</h2><ul>
@@ -35,11 +36,8 @@
     
     <summary type="html">
     
-      &lt;ul&gt;
-&lt;li&gt;只是一个比较简陋的游戏,目前是初代版本,以后看心情更新吧.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;游戏说明&quot;&gt;&lt;a href=&quot;#游戏说明&quot; class=&quot;headerlink&quot; title=&quot;游戏说明:&quot;&gt;&lt;/a&gt;游戏说明:&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;坦克大战
+      &lt;h1 id=&quot;tankWar&quot;&gt;&lt;a href=&quot;#tankWar&quot; class=&quot;headerlink&quot; title=&quot;tankWar&quot;&gt;&lt;/a&gt;tankWar&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&quot;title-tankWar&quot;&gt;&lt;a href=&quot;#title-tankWar&quot; 
     
     </summary>
     
