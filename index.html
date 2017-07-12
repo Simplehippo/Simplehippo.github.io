@@ -9,7 +9,7 @@
   <title>杨育才的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="你好">
-<meta name="keywords" content="javase,javaee,生活,开源小项目,笔记,spring mvc,spring">
+<meta name="keywords" content="javase,javaee,生活,开源小项目,笔记,spring mvc,spring,css">
 <meta property="og:type" content="website">
 <meta property="og:title" content="杨育才的个人博客">
 <meta property="og:url" content="http://yoursite.com/index.html">
@@ -66,6 +66,10 @@
     		
     			
     			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+            
+    			
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
     			
             
     			
@@ -141,36 +145,98 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-css记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-git学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/12/css记录/">css记录</a>
+      <a class="article-title" href="/2017/07/12/git学习/">git学习</a>
     </h1>
   
 
         
-        <a href="/2017/07/12/css记录/" class="archive-article-date">
-  	<time datetime="2017-07-12T02:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-12</time>
+        <a href="/2017/07/12/git学习/" class="archive-article-date">
+  	<time datetime="2017-07-12T06:26:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><ul>
-<li><code>&lt;hr /&gt;</code> 添加一个分割横线</li>
-<li><code>&lt;pre&gt;</code> 添加预格式化的文本,如代码</li>
-<li><code>&lt;code&gt;</code> 一行</li>
-<li><code>&lt;br /&gt;</code> 换行</li>
-<li><code>&lt;hx&gt;</code>(x=1,2,3,4,5,6) 文本标题</li>
+        <h2 id="非git-的命令"><a href="#非git-的命令" class="headerlink" title="非git 的命令"></a>非git 的命令</h2><ul>
+<li>[mkdir 文件名]      创建一个文件夹</li>
+<li>[cd]                 进入一个文件夹</li>
+<li>[cat]                 查看文件内容</li>
+<li>[pwd]                查看当前路径</li>
+<li>[rm]                删除文件</li>
+<li>[rmdir]                删除空的文件夹</li>
 </ul>
-        
-          <a class="article-more-a" href="/2017/07/12/css记录/#more">more >></a>
-        
+<h2 id="git-的命令"><a href="#git-的命令" class="headerlink" title="git 的命令"></a>git 的命令</h2><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><ul>
+<li>[$ git init]                 初始化一个git仓库<h3 id="1-常用命令"><a href="#1-常用命令" class="headerlink" title="1.常用命令"></a>1.常用命令</h3></li>
+<li>[$ git status]                显示所有文件的状态</li>
+<li>[$ git add  文件名]          把文件加到暂存区</li>
+<li>[$ git commit -m “描述”]       把暂存区的内容提交</li>
+<li>[$ git diff 文件名]            只会显示工作区文件内容的改变,如果加到暂存区了,就不会显示内容了</li>
+<li>[$ git log]                    显示文件的提交日志</li>
+<li>[$ git log –pretty=oneline]    在一行里显示文件的提交日志</li>
+<li>[$ git reflog]                        显示当前仓库的提交和回退操作指令日志</li>
+<li>[$ git log –graph –pretty=oneline –abbrev-commit]            看提交的结构<h3 id="2-版本回退"><a href="#2-版本回退" class="headerlink" title="2.版本回退"></a>2.版本回退</h3></li>
+<li>[$ git reset –hard HEAD^]        版本回退到上一个版本</li>
+<li>[$ git reset –hard HEAD~n]        版本回退到第前n个版本</li>
+<li>[$ git reset –hard 版本commit id]    版本回退到指定的commit id号对应的版本</li>
+<li>[$ git checkout – <file>]             (注意:–很重要,必加.否则就成了改变分支)把工作区的文件内容修改全部取消,回退到最近的commit|add状态</file></li>
+<li>[$ git reset <head|head^|head~n> &lt;文件名&gt;]         把暂存区的指定的修改给移除</head|head^|head~n></li>
+<li>[$ git rm <file>]                                删除版本库里的文件,并且会把工作区的文件也删除<h3 id="3-与远程库建立连接"><a href="#3-与远程库建立连接" class="headerlink" title="3.与远程库建立连接"></a>3.与远程库建立连接</h3></file></li>
+<li>[$ git remote add &lt;自定义远程库名&gt; git@github.com:用户名/库名.git]        创建一个远程库连接点</li>
+<li>[$ git remote add &lt;自定义远程库名&gt; <a href="https://github.com/用户名/库名.git" target="_blank" rel="external">https://github.com/用户名/库名.git</a>]    创建一个远程库连接点,但每次都需要输账号密码</li>
+<li>[$ git remote -v]                                显示较详细远程信息</li>
+<li>[$ git remote]                                    显示简短的远程信息<h3 id="4-推送到远程库"><a href="#4-推送到远程库" class="headerlink" title="4.推送到远程库"></a>4.推送到远程库</h3></li>
+<li>[$ git push -u &lt;自定义远程库名&gt; 远程库的分支名]                                    把修改提交到远程服务器,第一次加一个-u参数</li>
+<li>[$ git push &lt;自定义远程库名&gt; 远程库的分支名]                                    把修改提交到远程服务器的对应分支<h3 id="5-从远程库拉取"><a href="#5-从远程库拉取" class="headerlink" title="5.从远程库拉取"></a>5.从远程库拉取</h3></li>
+<li>[$ git pull –rebase &lt;自定义的远程库名&gt; &lt;分支名&gt;]                        从远程库里拉取内容</li>
+<li>[$ git pull]                            在已建立流桥梁的情况下,可以拉取远程的最新库<h3 id="6-从远程库克隆"><a href="#6-从远程库克隆" class="headerlink" title="6.从远程库克隆"></a>6.从远程库克隆</h3></li>
+<li>[$ git clone git@github.com:用户名/库名.git]                            从远程库克隆<h3 id="7-分支操作"><a href="#7-分支操作" class="headerlink" title="7.分支操作"></a>7.分支操作</h3></li>
+<li>[$ git branch]                                查看所有分支,当前分支前有一个*号</li>
+<li>[$ git branch &lt;分支名&gt;]                        创建一个新的分支                    </li>
+<li>[$ git branch -d &lt;分支名&gt;]                    删除一个分支</li>
+<li>[$ git branch -D &lt;分支名&gt;]                        强制删除分支</li>
+<li>[$ git branch –set-upstream 当前分支名 origin/&lt;远程分支名&gt;]        在当前分支和远程分支之间建立一个流桥梁</li>
+<li>[$ git checkout &lt;分支名&gt;]                    转换分支,就是转换HEAD指针的指向</li>
+<li>[$ git checkout -b &lt;分支名&gt;]                创建一个新的分支并指向此分支</li>
+<li>[$ git merge &lt;分支名&gt;]                        在当前HEAD指向的分支里合并指定分支</li>
+<li>[$ git merge –no-ff -m “描述” &lt;分支名&gt;]                        融合分支但是不是快进模式,就是说显示分支的结构<h3 id="8-工作环境的存储与回复"><a href="#8-工作环境的存储与回复" class="headerlink" title="8.工作环境的存储与回复"></a>8.工作环境的存储与回复</h3></li>
+<li>[$ git stash]                                                    会把当前的工作环境存储起来</li>
+<li>[$ git stash list]                                                查看已经存储的环境</li>
+<li>[$ git stash apply &lt;存储的工作环境序号&gt;]                        会把指定的工作环境恢复,同时还会比较冲突,但不会删除序号</li>
+<li>[$ git stash pop &lt;存储的工作环境序号&gt;]                            会把指定的工作环境恢复,同时还会比较冲突,同时删除序号                        <h3 id="9-tag标签定义版本"><a href="#9-tag标签定义版本" class="headerlink" title="9.tag标签定义版本"></a>9.tag标签定义版本</h3></li>
+<li>[$ git tag <tag名> &lt;默认commit是HEAD&gt;]            在当前最近的一次提交下建立一个标签</tag名></li>
+<li>[$ git tag <tag名> commitId]                    在指定的提交位置建立一个标签</tag名></li>
+<li>[$ git tag -a <tag名> -m “描述” commitId]        在指定的提交位置建立一个标签,并加上描述信息和名字</tag名></li>
+<li>[$ git tag -s <tag名> -m “描述” commitId]        在指定的提交位置建立一个标签,并加上描述信息和名字,但是用PGP签名标签</tag名></li>
+<li>[$ git tag]                       查看所有tag信息</li>
+<li>[git show <tagname>]                查看指定tag信息</tagname></li>
+<li>[$ git push origin <tag名>]                        把指定标签推送到远程</tag名></li>
+<li>[$ git push origin –tags]                        把未提交的标签全部推送到远程</li>
+<li>[$ git tag -d <tag名>]                            删除标签</tag名></li>
+<li>[$ git push origin :refs/tags/<tag名>]            在远程删除一个标签,注:必须先在本地删除标签</tag名></li>
+<li>[$ git add -f &lt;文件名&gt;]                            强行加入一个被忽视的文件到暂存区<h3 id="10-自定义git-原来的仍然可用"><a href="#10-自定义git-原来的仍然可用" class="headerlink" title="10.自定义git(原来的仍然可用)"></a>10.自定义git(原来的仍然可用)</h3></li>
+<li>[$ git config –global alias.&lt;指令的代替名&gt; 被代替的指令]     简化一个指令,相当于加了一个快捷键,原来的依然能用</li>
+<li>[$ git config –global color.ui true]  让git显示颜色</li>
+<li>[$ git config –global alias.st status] 将status配置出另一名字st[$git st] </li>
+<li>[$ git config –global alias.co checkout] 将checkout配置出另一名字co[$git co]</li>
+<li>[$ git config –global alias.ci commit] 将commit配置出另一名字ci[$git ci]</li>
+<li>[$ git config –global alias.br branch] 将branch配置出另一名字br[$git br]</li>
+<li>[$ git config –global alias.last ‘log -1’] 为最后一次提交配置 last[$git last]</li>
+<li>[git config –global alias.lg “log –color –graph –pretty=format:’%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset’ –abbrev-commit”] 丧心病狂…[$git lg]</li>
+<li><h4 id="配置的别名在C-Users-Administrator-gitconfig中可查看-win7"><a href="#配置的别名在C-Users-Administrator-gitconfig中可查看-win7" class="headerlink" title="配置的别名在C:\Users\Administrator.gitconfig中可查看(win7)"></a>配置的别名在C:\Users\Administrator.gitconfig中可查看(win7)</h4></li>
+</ul>
+<h2 id="忽视文件需要"><a href="#忽视文件需要" class="headerlink" title="忽视文件需要:"></a>忽视文件需要:</h2><ul>
+<li>1.在工作区根路径下创建一个.gitignore的文件,内容是要忽略的文件特征(后缀)</li>
+<li>2.提交到版本库中</li>
+</ul>
+<h2 id="本文的-…-无特殊含义-只是为了美观"><a href="#本文的-…-无特殊含义-只是为了美观" class="headerlink" title="本文的[…]无特殊含义,只是为了美观"></a>本文的[…]无特殊含义,只是为了美观</h2>
       
 
       
@@ -183,11 +249,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">笔记 - git</a>
         		</li>
       		
 		</ul>
@@ -197,7 +259,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/12/css记录/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/07/12/git学习/">展开全文 >></a>
         </p>
       
 
@@ -295,6 +357,83 @@
 
 
   
+    <article id="post-css记录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/12/css记录/">css记录</a>
+    </h1>
+  
+
+        
+        <a href="/2017/07/12/css记录/" class="archive-article-date">
+  	<time datetime="2017-07-12T02:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><ul>
+<li><code>&lt;hr /&gt;</code> 添加一个分割横线</li>
+<li><code>&lt;pre&gt;</code> 添加预格式化的文本,如代码</li>
+<li><code>&lt;code&gt;</code> 一行</li>
+<li><code>&lt;br /&gt;</code> 换行</li>
+<li><code>&lt;hx&gt;</code>(x=1,2,3,4,5,6) 文本标题</li>
+</ul>
+        
+          <a class="article-more-a" href="/2017/07/12/css记录/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/07/12/css记录/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
 
 
@@ -349,17 +488,25 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
       
     
+      
+      
+      
+    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      
+        
+      
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -380,11 +527,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color4">笔记 - git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -393,6 +536,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
             
             <div class="clearfix"></div>
@@ -439,11 +590,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
 
     
+    	<section class="tools-section tools-section-friends" q-show="friends">
+  		
+    	</section>
+    
 
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">你好</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">即将成为一枚江南大学大二狗</div>
   	  	
     	</section>
     
