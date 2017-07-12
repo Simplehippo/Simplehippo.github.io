@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/07/12/junit初学记录/index.html">
 <meta property="og:site_name" content="杨育才的个人博客">
 <meta property="og:description" content="基本注解(需要在开始的时候创建一个被测试类的实例)@Test 测试的注解有限制:方法必须返回void,并且方法不能有参数 扩展:1.可以加入限时:限时2秒">
-<meta property="og:updated_time" content="2017-07-12T08:55:14.342Z">
+<meta property="og:updated_time" content="2017-07-12T09:27:15.838Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="junit初学记录">
 <meta name="twitter:description" content="基本注解(需要在开始的时候创建一个被测试类的实例)@Test 测试的注解有限制:方法必须返回void,并且方法不能有参数 扩展:1.可以加入限时:限时2秒">
@@ -173,17 +173,9 @@
 <h3 id="Before"><a href="#Before" class="headerlink" title="@Before"></a>@Before</h3><ul>
 <li>在所有的Test注解标志的单元测试之前执行<br>但是,除首次生成的@Before注解的方法外,<br>其他的@Before注解的方法是按照修改顺序反向执行,</li>
 <li><p>例如:</p>
-<ul>
-<li>执行结果:   0 3 2 1</li>
-<li><p>@Before<br>public void setUp3() throws Exception {<br>  System.out.println(“3”);<br>}</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">@Before</div><div class="line">   public void setUp3() throws Exception &#123;</div><div class="line">       System.out.println(&quot;3&quot;);</div><div class="line">   &#125;</div><div class="line">   </div><div class="line">   @Before</div><div class="line">   public void setUp1() throws Exception &#123;</div><div class="line">       System.out.println(&quot;1&quot;);</div><div class="line">   &#125;</div><div class="line">   </div><div class="line">   @Before</div><div class="line">   public void setUp() throws Exception &#123;</div><div class="line">       System.out.println(&quot;0&quot;);</div><div class="line">       c.clear();</div><div class="line">   &#125;</div><div class="line">   </div><div class="line">   @Before</div><div class="line">   public void setUp2() throws Exception &#123;</div><div class="line">       System.out.println(&quot;2&quot;);</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p>@Before<br>public void setUp1() throws Exception {<br>  System.out.println(“1”);<br>}</p>
-</li>
-<li><p>@Before<br>public void setUp() throws Exception {<br>  System.out.println(“0”);<br>  c.clear();<br>}</p>
-</li>
-<li><p>@Before<br>public void setUp2() throws Exception {<br>  System.out.println(“2”);<br>}</p>
-</li>
-</ul>
+<li><p>执行结果:   0 3 2 1</p>
 </li>
 </ul>
 <h3 id="After"><a href="#After" class="headerlink" title="@After"></a>@After</h3><ul>
@@ -199,10 +191,8 @@
 </ul>
 <h3 id="RunWith"><a href="#RunWith" class="headerlink" title="@RunWith"></a>@RunWith</h3><ul>
 <li>使用在类上,作用于类中的所有方法</li>
-<li>使用:     <ul>
-<li>@RunWith (TestClassRunner.calss)</li>
-<li>@RunWith (xxx.class)</li>
-</ul>
+<li><p>使用:</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">@RunWith (TestClassRunner.calss)</div><div class="line">@RunWith (xxx.class)</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="参数化测试-不多于三个就不用-最好写个模板"><a href="#参数化测试-不多于三个就不用-最好写个模板" class="headerlink" title="参数化测试:不多于三个就不用,最好写个模板"></a>参数化测试:不多于三个就不用,最好写个模板</h3><h4 id="具体做法"><a href="#具体做法" class="headerlink" title="具体做法:"></a>具体做法:</h4><ul>
@@ -496,19 +486,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -521,6 +507,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">ip</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
