@@ -71,9 +71,13 @@
     <link href="http://yoursite.com/2017/07/12/Mysql%E5%AD%98%E5%82%A8java%E5%AF%B9%E8%B1%A1/"/>
     <id>http://yoursite.com/2017/07/12/Mysql存储java对象/</id>
     <published>2017-07-12T07:38:48.000Z</published>
-    <updated>2017-07-12T08:57:14.265Z</updated>
+    <updated>2017-07-12T09:06:12.359Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="MySQL-设置字段为-blob-java对象实现Serializable接口"><a href="#MySQL-设置字段为-blob-java对象实现Serializable接口" class="headerlink" title="MySQL 设置字段为 blob , java对象实现Serializable接口"></a>MySQL 设置字段为 blob , java对象实现Serializable接口</h3><p><br><a id="more"></a></p>
+    <content type="html"><![CDATA[<h3 id="MySQL-设置字段为-blob-java对象实现Serializable接口"><a href="#MySQL-设置字段为-blob-java对象实现Serializable接口" class="headerlink" title="MySQL 设置字段为 blob , java对象实现Serializable接口"></a>MySQL 设置字段为 blob , java对象实现Serializable接口</h3><ul>
+<li>保存对象，先将对象序列化为byte[]</li>
+<li>获取对象 使用getBytes()，将获取的byte[]反序列化为Java 对象<br><a id="more"></a></li>
+</ul>
+<p>###具体实现</p>
 <ul>
 <li><p>保存对象，先将对象序列化为byte[]</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">ByteArrayOutputStream baos = new ByteArrayOutputStream();    </div><div class="line">ObjectOutputStream out = null;     </div><div class="line">try &#123;       </div><div class="line">    out = new ObjectOutputStream(baos);       </div><div class="line">    out.writeObject(java实例对象);     </div><div class="line">&#125; catch (IOException e) &#123;       </div><div class="line">    logger.error(&quot;msg2Bytes error!&quot;, e);     </div><div class="line">&#125;finally&#123;       </div><div class="line">    try &#123;         </div><div class="line">        out.close();       </div><div class="line">    &#125; catch (IOException e) &#123;         </div><div class="line">        logger.error(&quot;msg2Bytes error!&quot;, e);       </div><div class="line">    &#125;     </div><div class="line">&#125;          </div><div class="line">return baos.toByteArray();</div></pre></td></tr></table></figure>
@@ -99,14 +103,16 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;MySQL-设置字段为-blob-java对象实现Serializable接口&quot;&gt;&lt;a href=&quot;#MySQL-设置字段为-blob-java对象实现Serializable接口&quot; class=&quot;headerlink&quot; title=&quot;MySQL 设置字段为 blob , java对象实现Serializable接口&quot;&gt;&lt;/a&gt;MySQL 设置字段为 blob , java对象实现Serializable接口&lt;/h3&gt;&lt;p&gt;&lt;br&gt;
+      &lt;h3 id=&quot;MySQL-设置字段为-blob-java对象实现Serializable接口&quot;&gt;&lt;a href=&quot;#MySQL-设置字段为-blob-java对象实现Serializable接口&quot; class=&quot;headerlink&quot; title=&quot;MySQL 设置字段为 blob , java对象实现Serializable接口&quot;&gt;&lt;/a&gt;MySQL 设置字段为 blob , java对象实现Serializable接口&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;保存对象，先将对象序列化为byte[]&lt;/li&gt;
+&lt;li&gt;获取对象 使用getBytes()，将获取的byte[]反序列化为Java 对象&lt;br&gt;
     
     </summary>
     
     
-      <category term="java" scheme="http://yoursite.com/tags/java/"/>
-    
       <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
     
   </entry>
   
