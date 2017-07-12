@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/07/12/junit初学记录/index.html">
 <meta property="og:site_name" content="杨育才的个人博客">
 <meta property="og:description" content="基本注解(需要在开始的时候创建一个被测试类的实例)@Test 测试的注解有限制:方法必须返回void,并且方法不能有参数扩展:1.可以加入限时:限时2秒  @Test(timeout = 2000)   2.可以测试异常">
-<meta property="og:updated_time" content="2017-07-12T08:33:22.432Z">
+<meta property="og:updated_time" content="2017-07-12T08:35:28.094Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="junit初学记录">
 <meta name="twitter:description" content="基本注解(需要在开始的时候创建一个被测试类的实例)@Test 测试的注解有限制:方法必须返回void,并且方法不能有参数扩展:1.可以加入限时:限时2秒  @Test(timeout = 2000)   2.可以测试异常">
@@ -165,8 +165,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="基本注解-需要在开始的时候创建一个被测试类的实例"><a href="#基本注解-需要在开始的时候创建一个被测试类的实例" class="headerlink" title="基本注解(需要在开始的时候创建一个被测试类的实例)"></a>基本注解(需要在开始的时候创建一个被测试类的实例)</h2><h3 id="Test"><a href="#Test" class="headerlink" title="@Test"></a>@Test</h3><ul>
-<li>测试的注解<br>有限制:方法必须返回void,并且方法不能有参数<h5 id="扩展"><a href="#扩展" class="headerlink" title="扩展:"></a>扩展:</h5><h6 id="1-可以加入限时-限时2秒"><a href="#1-可以加入限时-限时2秒" class="headerlink" title="1.可以加入限时:限时2秒"></a>1.可以加入限时:限时2秒</h6>  @Test(timeout = 2000)   <h6 id="2-可以测试异常"><a href="#2-可以测试异常" class="headerlink" title="2.可以测试异常"></a>2.可以测试异常<br><a id="more"></a></h6>  @Test( expected = ArithmeticException.class)<pre><code>public void testDivide() {
-        c.divide(0);
+<li>测试的注解<br>有限制:方法必须返回void,并且方法不能有参数<h5 id="扩展"><a href="#扩展" class="headerlink" title="扩展:"></a>扩展:</h5><h6 id="1-可以加入限时-限时2秒"><a href="#1-可以加入限时-限时2秒" class="headerlink" title="1.可以加入限时:限时2秒"></a>1.可以加入限时:限时2秒</h6>  @Test(timeout = 2000)   <h6 id="2-可以测试异常"><a href="#2-可以测试异常" class="headerlink" title="2.可以测试异常"></a>2.可以测试异常<br><a id="more"></a></h6>  @Test( expected = ArithmeticException.class)<br>  public void testDivide() {<pre><code>c.divide(0);
 </code></pre>  }</li>
 </ul>
 <h3 id="Before"><a href="#Before" class="headerlink" title="@Before"></a>@Before</h3><ul>
@@ -222,36 +221,41 @@
 <li>2.初始化两个参数(顺序很重要,跟Collection里的数据顺序一致)</li>
 </ul>
 </li>
-<li><p>6.写测试方法:(测试方法不能带参数,所以用成员变量)</p>
-<ul>
+<li>6.写测试方法:(测试方法不能带参数,所以用成员变量)<ul>
 <li>1.调用时,将para作为参数传递进去</li>
-<li><p>2.将res作为预期结果</p>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例:"></a>示例:</h3><p>@RunWith(Parameterized. class )<br>public   class  SquareTest  {</p>
-<pre><code>private   static  Calculator calculator  =   new  Calculator();
-private   int  param;
-private   int  result;
-
- @Parameters
-public   static  Collection data()  {
-    return  Arrays.asList( new  Object[][] {
-            { 2 ,  4 } ,
-            { 0 ,  0 } ,
-            {－ 3 ,  9 } ,
-   } );
-</code></pre><p>   } </p>
-<pre><code> // 构造函数，对变量进行初始化 
-public  SquareTest( int  param,  int  result)  {
-    this .param  =  param;
-    this .result  =  result;
-</code></pre><p>   } </p>
-<p>   @Test<br>   public   void  square()  {</p>
-<pre><code>calculator.square(param);
-assertEquals(result, calculator.getResult());
-</code></pre><p>   }</p>
-<p>} </p>
-<h3 id="打包测试"><a href="#打包测试" class="headerlink" title="打包测试:"></a>打包测试:</h3><h4 id="具体做法-1"><a href="#具体做法-1" class="headerlink" title="具体做法:"></a>具体做法:</h4></li>
+<li>2.将res作为预期结果</li>
 </ul>
 </li>
+</ul>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例:"></a>示例:</h3><pre><code>@RunWith(Parameterized. class )
+public   class  SquareTest  {
+      private   static  Calculator calculator  =   new  Calculator();
+      private   int  param;
+      private   int  result;
+
+       @Parameters
+      public   static  Collection data()  {
+          return  Arrays.asList( new  Object[][] {
+                  { 2 ,  4 } ,
+                  { 0 ,  0 } ,
+                  {－ 3 ,  9 } ,
+         } );
+     } 
+
+       // 构造函数，对变量进行初始化 
+      public  SquareTest( int  param,  int  result)  {
+          this .param  =  param;
+          this .result  =  result;
+     } 
+
+     @Test
+     public   void  square()  {
+         calculator.square(param);
+         assertEquals(result, calculator.getResult());
+     }
+
+ } 
+</code></pre><h3 id="打包测试"><a href="#打包测试" class="headerlink" title="打包测试:"></a>打包测试:</h3><h4 id="具体做法-1"><a href="#具体做法-1" class="headerlink" title="具体做法:"></a>具体做法:</h4><ul>
 <li>1.运行器:Suite.class<ul>
 <li>@RunWith(Suite.class)</li>
 </ul>
@@ -259,11 +263,16 @@ assertEquals(result, calculator.getResult());
 <li>2.打包的类作为参数传递进去,结尾不加’;’<br>  这只是个注解<br>  @Suite.SuiteClasses({<pre><code>xx.class,
 xxx.class
 </code></pre>  })</li>
-<li>3.随便起个类名,内容为空即可<br>  public class xxx {}<h4 id="实例"><a href="#实例" class="headerlink" title="实例:"></a>实例:</h4>  @RunWith(Suite. class )<br>  @Suite.SuiteClasses( {<pre><code>CalculatorTest.class,
-SquareTest.class 
-</code></pre>  } )<br>  public   class  AllCalculatorTests  {<br>  } </li>
+<li>3.随便起个类名,内容为空即可<br>  public class xxx {}</li>
 </ul>
-
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例:"></a>实例:</h4><pre><code>@RunWith(Suite. class ) 
+@Suite.SuiteClasses( {
+    CalculatorTest.class,
+    SquareTest.class 
+} )
+public   class  AllCalculatorTests  {
+} 
+</code></pre>
       
 
       
@@ -492,15 +501,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">net</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">ip</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
