@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2017/07/12/tankWar/</loc>
-    
-    <lastmod>2017-07-12T09:09:05.701Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2017/07/12/java%E8%8E%B7%E5%8F%96%E6%9C%AC%E6%9C%BA%E5%B1%80%E5%9F%9F%E7%BD%91IP/</loc>
     
-    <lastmod>2017-07-12T09:08:45.214Z</lastmod>
+    <lastmod>2017-07-12T09:11:54.762Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2017/07/12/Mysql%E5%AD%98%E5%82%A8java%E5%AF%B9%E8%B1%A1/</loc>
     
-    <lastmod>2017-07-12T09:08:01.780Z</lastmod>
+    <lastmod>2017-07-12T09:11:32.857Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2017/07/12/tankWar/</loc>
+    
+    <lastmod>2017-07-12T09:11:03.649Z</lastmod>
     
   </url>
   
