@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/07/12/Hello%20Blog/</loc>
+    
+    <lastmod>2017-07-12T09:21:44.238Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/07/12/java%E8%8E%B7%E5%8F%96%E6%9C%AC%E6%9C%BA%E5%B1%80%E5%9F%9F%E7%BD%91IP/</loc>
     
     <lastmod>2017-07-12T09:11:54.762Z</lastmod>
