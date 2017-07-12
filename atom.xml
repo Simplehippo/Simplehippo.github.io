@@ -71,9 +71,9 @@
     <link href="http://yoursite.com/2017/07/12/Mysql%E5%AD%98%E5%82%A8java%E5%AF%B9%E8%B1%A1/"/>
     <id>http://yoursite.com/2017/07/12/Mysql存储java对象/</id>
     <published>2017-07-12T07:38:48.000Z</published>
-    <updated>2017-07-12T08:28:38.894Z</updated>
+    <updated>2017-07-12T08:32:42.526Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="MySQL-设置字段为-blob-java对象实现Serializable接口"><a href="#MySQL-设置字段为-blob-java对象实现Serializable接口" class="headerlink" title="MySQL  设置字段为 blob , java对象实现Serializable接口"></a>MySQL  设置字段为 blob , java对象实现Serializable接口</h3><a id="more"></a>
+    <content type="html"><![CDATA[<h3 id="MySQL-设置字段为-blob-java对象实现Serializable接口"><a href="#MySQL-设置字段为-blob-java对象实现Serializable接口" class="headerlink" title="MySQL 设置字段为 blob , java对象实现Serializable接口"></a>MySQL 设置字段为 blob , java对象实现Serializable接口</h3><p><br><a id="more"></a></p>
 <h4 id="保存对象，先将对象序列化为byte"><a href="#保存对象，先将对象序列化为byte" class="headerlink" title="保存对象，先将对象序列化为byte[]"></a>保存对象，先将对象序列化为byte[]</h4><pre><code>ByteArrayOutputStream baos = new ByteArrayOutputStream();    
 ObjectOutputStream out = null;     
 try {       
@@ -119,7 +119,7 @@ try{
     
     <summary type="html">
     
-      &lt;h3 id=&quot;MySQL-设置字段为-blob-java对象实现Serializable接口&quot;&gt;&lt;a href=&quot;#MySQL-设置字段为-blob-java对象实现Serializable接口&quot; class=&quot;headerlink&quot; title=&quot;MySQL  设置字段为 blob , java对象实现Serializable接口&quot;&gt;&lt;/a&gt;MySQL  设置字段为 blob , java对象实现Serializable接口&lt;/h3&gt;
+      &lt;h3 id=&quot;MySQL-设置字段为-blob-java对象实现Serializable接口&quot;&gt;&lt;a href=&quot;#MySQL-设置字段为-blob-java对象实现Serializable接口&quot; class=&quot;headerlink&quot; title=&quot;MySQL 设置字段为 blob , java对象实现Serializable接口&quot;&gt;&lt;/a&gt;MySQL 设置字段为 blob , java对象实现Serializable接口&lt;/h3&gt;&lt;p&gt;&lt;br&gt;
     
     </summary>
     
@@ -135,14 +135,14 @@ try{
     <link href="http://yoursite.com/2017/07/12/junit%E5%88%9D%E5%AD%A6%E8%AE%B0%E5%BD%95/"/>
     <id>http://yoursite.com/2017/07/12/junit初学记录/</id>
     <published>2017-07-12T07:24:23.000Z</published>
-    <updated>2017-07-12T08:30:40.787Z</updated>
+    <updated>2017-07-12T08:33:22.432Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="基本注解-需要在开始的时候创建一个被测试类的实例"><a href="#基本注解-需要在开始的时候创建一个被测试类的实例" class="headerlink" title="基本注解(需要在开始的时候创建一个被测试类的实例)"></a>基本注解(需要在开始的时候创建一个被测试类的实例)</h3><h4 id="Test"><a href="#Test" class="headerlink" title="@Test"></a>@Test</h4><ul>
-<li>测试的注解<br>有限制:方法必须返回void,并且方法不能有参数<h6 id="扩展"><a href="#扩展" class="headerlink" title="扩展:"></a>扩展:</h6>####### 1.可以加入限时:限时2秒<br>  @Test(timeout = 2000)<br>####### 2.可以测试异常<br><a id="more"></a><br>  @Test( expected = ArithmeticException.class)<pre><code>public void testDivide() {
+    <content type="html"><![CDATA[<h2 id="基本注解-需要在开始的时候创建一个被测试类的实例"><a href="#基本注解-需要在开始的时候创建一个被测试类的实例" class="headerlink" title="基本注解(需要在开始的时候创建一个被测试类的实例)"></a>基本注解(需要在开始的时候创建一个被测试类的实例)</h2><h3 id="Test"><a href="#Test" class="headerlink" title="@Test"></a>@Test</h3><ul>
+<li>测试的注解<br>有限制:方法必须返回void,并且方法不能有参数<h5 id="扩展"><a href="#扩展" class="headerlink" title="扩展:"></a>扩展:</h5><h6 id="1-可以加入限时-限时2秒"><a href="#1-可以加入限时-限时2秒" class="headerlink" title="1.可以加入限时:限时2秒"></a>1.可以加入限时:限时2秒</h6>  @Test(timeout = 2000)   <h6 id="2-可以测试异常"><a href="#2-可以测试异常" class="headerlink" title="2.可以测试异常"></a>2.可以测试异常<br><a id="more"></a></h6>  @Test( expected = ArithmeticException.class)<pre><code>public void testDivide() {
         c.divide(0);
 </code></pre>  }</li>
 </ul>
-<h4 id="Before"><a href="#Before" class="headerlink" title="@Before"></a>@Before</h4><ul>
+<h3 id="Before"><a href="#Before" class="headerlink" title="@Before"></a>@Before</h3><ul>
 <li>在所有的Test注解标志的单元测试之前执行<br>但是,除首次生成的@Before注解的方法外,<br>其他的@Before注解的方法是按照修改顺序反向执行,</li>
 <li><p>例如:</p>
 <ul>
@@ -158,18 +158,18 @@ try{
 </ul>
 </li>
 </ul>
-<h4 id="After"><a href="#After" class="headerlink" title="@After"></a>@After</h4><ul>
+<h3 id="After"><a href="#After" class="headerlink" title="@After"></a>@After</h3><ul>
 <li>在所有的Test注解标志的单元测试之后执行<br>顺序跟@Before反过来    1 2 3 0</li>
 </ul>
-<h4 id="BeforeClass"><a href="#BeforeClass" class="headerlink" title="@BeforeClass"></a>@BeforeClass</h4><ul>
+<h3 id="BeforeClass"><a href="#BeforeClass" class="headerlink" title="@BeforeClass"></a>@BeforeClass</h3><ul>
 <li>必须是   public static void xxx () {}   形式</li>
 <li>在开始的时候执行一次<br>只会在最开始执行一次,也仅有一次</li>
 </ul>
-<h4 id="AfterClass"><a href="#AfterClass" class="headerlink" title="@AfterClass"></a>@AfterClass</h4><ul>
+<h3 id="AfterClass"><a href="#AfterClass" class="headerlink" title="@AfterClass"></a>@AfterClass</h3><ul>
 <li>必须是   public static void xxx () {}   形式</li>
 <li>在所有的测试都结束的时候执行一次<br>只会在最后执行一次,也仅有一次</li>
 </ul>
-<h4 id="RunWith"><a href="#RunWith" class="headerlink" title="@RunWith"></a>@RunWith</h4><ul>
+<h3 id="RunWith"><a href="#RunWith" class="headerlink" title="@RunWith"></a>@RunWith</h3><ul>
 <li>使用在类上,作用于类中的所有方法</li>
 <li>使用:     <ul>
 <li>@RunWith (TestClassRunner.calss)</li>
@@ -177,7 +177,7 @@ try{
 </ul>
 </li>
 </ul>
-<h4 id="参数化测试-不多于三个就不用-最好写个模板"><a href="#参数化测试-不多于三个就不用-最好写个模板" class="headerlink" title="参数化测试:不多于三个就不用,最好写个模板"></a>参数化测试:不多于三个就不用,最好写个模板</h4><h5 id="具体做法"><a href="#具体做法" class="headerlink" title="具体做法:"></a>具体做法:</h5><ul>
+<h3 id="参数化测试-不多于三个就不用-最好写个模板"><a href="#参数化测试-不多于三个就不用-最好写个模板" class="headerlink" title="参数化测试:不多于三个就不用,最好写个模板"></a>参数化测试:不多于三个就不用,最好写个模板</h3><h4 id="具体做法"><a href="#具体做法" class="headerlink" title="具体做法:"></a>具体做法:</h4><ul>
 <li>1.新建另一个测试类</li>
 <li>2.运行器:Parameterized.class</li>
 <li>3.增加两个参数:para,res(名字,顺序无所谓)</li>
@@ -195,41 +195,36 @@ try{
 <li>2.初始化两个参数(顺序很重要,跟Collection里的数据顺序一致)</li>
 </ul>
 </li>
-<li>6.写测试方法:(测试方法不能带参数,所以用成员变量)<ul>
+<li><p>6.写测试方法:(测试方法不能带参数,所以用成员变量)</p>
+<ul>
 <li>1.调用时,将para作为参数传递进去</li>
-<li>2.将res作为预期结果</li>
+<li><p>2.将res作为预期结果</p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例:"></a>示例:</h3><p>@RunWith(Parameterized. class )<br>public   class  SquareTest  {</p>
+<pre><code>private   static  Calculator calculator  =   new  Calculator();
+private   int  param;
+private   int  result;
+
+ @Parameters
+public   static  Collection data()  {
+    return  Arrays.asList( new  Object[][] {
+            { 2 ,  4 } ,
+            { 0 ,  0 } ,
+            {－ 3 ,  9 } ,
+   } );
+</code></pre><p>   } </p>
+<pre><code> // 构造函数，对变量进行初始化 
+public  SquareTest( int  param,  int  result)  {
+    this .param  =  param;
+    this .result  =  result;
+</code></pre><p>   } </p>
+<p>   @Test<br>   public   void  square()  {</p>
+<pre><code>calculator.square(param);
+assertEquals(result, calculator.getResult());
+</code></pre><p>   }</p>
+<p>} </p>
+<h3 id="打包测试"><a href="#打包测试" class="headerlink" title="打包测试:"></a>打包测试:</h3><h4 id="具体做法-1"><a href="#具体做法-1" class="headerlink" title="具体做法:"></a>具体做法:</h4></li>
 </ul>
 </li>
-</ul>
-<h4 id="示例"><a href="#示例" class="headerlink" title="示例:"></a>示例:</h4><pre><code>@RunWith(Parameterized. class )
-public   class  SquareTest  {
-      private   static  Calculator calculator  =   new  Calculator();
-      private   int  param;
-      private   int  result;
-
-       @Parameters
-      public   static  Collection data()  {
-          return  Arrays.asList( new  Object[][] {
-                  { 2 ,  4 } ,
-                  { 0 ,  0 } ,
-                  {－ 3 ,  9 } ,
-         } );
-     } 
-
-       // 构造函数，对变量进行初始化 
-      public  SquareTest( int  param,  int  result)  {
-          this .param  =  param;
-          this .result  =  result;
-     } 
-
-     @Test
-     public   void  square()  {
-         calculator.square(param);
-         assertEquals(result, calculator.getResult());
-     }
-
- } 
-</code></pre><h4 id="打包测试"><a href="#打包测试" class="headerlink" title="打包测试:"></a>打包测试:</h4><h5 id="具体做法-1"><a href="#具体做法-1" class="headerlink" title="具体做法:"></a>具体做法:</h5><ul>
 <li>1.运行器:Suite.class<ul>
 <li>@RunWith(Suite.class)</li>
 </ul>
@@ -237,7 +232,7 @@ public   class  SquareTest  {
 <li>2.打包的类作为参数传递进去,结尾不加’;’<br>  这只是个注解<br>  @Suite.SuiteClasses({<pre><code>xx.class,
 xxx.class
 </code></pre>  })</li>
-<li>3.随便起个类名,内容为空即可<br>  public class xxx {}<h5 id="实例"><a href="#实例" class="headerlink" title="实例:"></a>实例:</h5>  @RunWith(Suite. class )<br>  @Suite.SuiteClasses( {<pre><code>CalculatorTest.class,
+<li>3.随便起个类名,内容为空即可<br>  public class xxx {}<h4 id="实例"><a href="#实例" class="headerlink" title="实例:"></a>实例:</h4>  @RunWith(Suite. class )<br>  @Suite.SuiteClasses( {<pre><code>CalculatorTest.class,
 SquareTest.class 
 </code></pre>  } )<br>  public   class  AllCalculatorTests  {<br>  } </li>
 </ul>
@@ -245,8 +240,8 @@ SquareTest.class
     
     <summary type="html">
     
-      &lt;h3 id=&quot;基本注解-需要在开始的时候创建一个被测试类的实例&quot;&gt;&lt;a href=&quot;#基本注解-需要在开始的时候创建一个被测试类的实例&quot; class=&quot;headerlink&quot; title=&quot;基本注解(需要在开始的时候创建一个被测试类的实例)&quot;&gt;&lt;/a&gt;基本注解(需要在开始的时候创建一个被测试类的实例)&lt;/h3&gt;&lt;h4 id=&quot;Test&quot;&gt;&lt;a href=&quot;#Test&quot; class=&quot;headerlink&quot; title=&quot;@Test&quot;&gt;&lt;/a&gt;@Test&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;测试的注解&lt;br&gt;有限制:方法必须返回void,并且方法不能有参数&lt;h6 id=&quot;扩展&quot;&gt;&lt;a href=&quot;#扩展&quot; class=&quot;headerlink&quot; title=&quot;扩展:&quot;&gt;&lt;/a&gt;扩展:&lt;/h6&gt;####### 1.可以加入限时:限时2秒&lt;br&gt;  @Test(timeout = 2000)&lt;br&gt;####### 2.可以测试异常&lt;br&gt;
+      &lt;h2 id=&quot;基本注解-需要在开始的时候创建一个被测试类的实例&quot;&gt;&lt;a href=&quot;#基本注解-需要在开始的时候创建一个被测试类的实例&quot; class=&quot;headerlink&quot; title=&quot;基本注解(需要在开始的时候创建一个被测试类的实例)&quot;&gt;&lt;/a&gt;基本注解(需要在开始的时候创建一个被测试类的实例)&lt;/h2&gt;&lt;h3 id=&quot;Test&quot;&gt;&lt;a href=&quot;#Test&quot; class=&quot;headerlink&quot; title=&quot;@Test&quot;&gt;&lt;/a&gt;@Test&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;测试的注解&lt;br&gt;有限制:方法必须返回void,并且方法不能有参数&lt;h5 id=&quot;扩展&quot;&gt;&lt;a href=&quot;#扩展&quot; class=&quot;headerlink&quot; title=&quot;扩展:&quot;&gt;&lt;/a&gt;扩展:&lt;/h5&gt;&lt;h6 id=&quot;1-可以加入限时-限时2秒&quot;&gt;&lt;a href=&quot;#1-可以加入限时-限时2秒&quot; class=&quot;headerlink&quot; title=&quot;1.可以加入限时:限时2秒&quot;&gt;&lt;/a&gt;1.可以加入限时:限时2秒&lt;/h6&gt;  @Test(timeout = 2000)   &lt;h6 id=&quot;2-可以测试异常&quot;&gt;&lt;a href=&quot;#2-可以测试异常&quot; class=&quot;headerlink&quot; title=&quot;2.可以测试异常&quot;&gt;&lt;/a&gt;2.可以测试异常&lt;br&gt;
     
     </summary>
     
