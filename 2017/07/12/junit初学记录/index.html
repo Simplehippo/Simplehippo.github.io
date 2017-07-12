@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>junit初学记录 | 杨育才的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基本注解(需要在开始的时候创建一个被测试类的实例)@Test 测试的注解有限制:方法必须返回void,并且方法不能有参数扩展: 1.可以加入限时: @Test(timeout = 2000)   限时2秒   2.可以测试异常">
+  <meta name="description" content="基本注解(需要在开始的时候创建一个被测试类的实例)@Test 测试的注解有限制:方法必须返回void,并且方法不能有参数扩展: 1.可以加入限时:限时2秒  @Test(timeout = 2000)    2.可以测试异常">
 <meta name="keywords" content="java,junit">
 <meta property="og:type" content="article">
 <meta property="og:title" content="junit初学记录">
 <meta property="og:url" content="http://yoursite.com/2017/07/12/junit初学记录/index.html">
 <meta property="og:site_name" content="杨育才的个人博客">
-<meta property="og:description" content="基本注解(需要在开始的时候创建一个被测试类的实例)@Test 测试的注解有限制:方法必须返回void,并且方法不能有参数扩展: 1.可以加入限时: @Test(timeout = 2000)   限时2秒   2.可以测试异常">
-<meta property="og:updated_time" content="2017-07-12T08:13:55.488Z">
+<meta property="og:description" content="基本注解(需要在开始的时候创建一个被测试类的实例)@Test 测试的注解有限制:方法必须返回void,并且方法不能有参数扩展: 1.可以加入限时:限时2秒  @Test(timeout = 2000)    2.可以测试异常">
+<meta property="og:updated_time" content="2017-07-12T08:20:30.542Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="junit初学记录">
-<meta name="twitter:description" content="基本注解(需要在开始的时候创建一个被测试类的实例)@Test 测试的注解有限制:方法必须返回void,并且方法不能有参数扩展: 1.可以加入限时: @Test(timeout = 2000)   限时2秒   2.可以测试异常">
+<meta name="twitter:description" content="基本注解(需要在开始的时候创建一个被测试类的实例)@Test 测试的注解有限制:方法必须返回void,并且方法不能有参数扩展: 1.可以加入限时:限时2秒  @Test(timeout = 2000)    2.可以测试异常">
   
     <link rel="alternative" href="/atom.xml" title="杨育才的个人博客" type="application/atom+xml">
   
@@ -166,12 +166,8 @@
       
         <h3 id="基本注解-需要在开始的时候创建一个被测试类的实例"><a href="#基本注解-需要在开始的时候创建一个被测试类的实例" class="headerlink" title="基本注解(需要在开始的时候创建一个被测试类的实例)"></a>基本注解(需要在开始的时候创建一个被测试类的实例)</h3><h4 id="Test"><a href="#Test" class="headerlink" title="@Test"></a>@Test</h4><ul>
 <li>测试的注解<br>有限制:方法必须返回void,并且方法不能有参数<h6 id="扩展"><a href="#扩展" class="headerlink" title="扩展:"></a>扩展:</h6></li>
-<li>1.可以加入限时:<ul>
-<li>@Test(timeout = 2000)   限时2秒</li>
-</ul>
-</li>
-<li>2.可以测试异常<br><a id="more"></a>
-  @Test( expected = ArithmeticException.class)<pre><code>public void testDivide() {
+<li>1.可以加入限时:限时2秒<br>  @Test(timeout = 2000)   </li>
+<li>2.可以测试异常<br><a id="more"></a><br>  @Test( expected = ArithmeticException.class)<pre><code>public void testDivide() {
         c.divide(0);
 </code></pre>  }</li>
 </ul>
@@ -236,51 +232,29 @@
 </ul>
 <h4 id="示例"><a href="#示例" class="headerlink" title="示例:"></a>示例:</h4><pre><code>@RunWith(Parameterized. class )
 public   class  SquareTest  {
+      private   static  Calculator calculator  =   new  Calculator();
+      private   int  param;
+      private   int  result;
 
-  private   static  Calculator calculator  =   new  Calculator();
-
-  private   int  param;
-
-  private   int  result;
-
-
-
- @Parameters
-
-  public   static  Collection data()  {
-
-      return  Arrays.asList( new  Object[][] {
-
-              { 2 ,  4 } ,
-
-              { 0 ,  0 } ,
-
-              {－ 3 ,  9 } ,
-
-     } );
-
- } 
-
-         // 构造函数，对变量进行初始化 
-
-      public  SquareTest( int  param,  int  result)  {
-
-          this .param  =  param;
-
-          this .result  =  result;
-
+       @Parameters
+      public   static  Collection data()  {
+          return  Arrays.asList( new  Object[][] {
+                  { 2 ,  4 } ,
+                  { 0 ,  0 } ,
+                  {－ 3 ,  9 } ,
+         } );
      } 
 
-
+       // 构造函数，对变量进行初始化 
+      public  SquareTest( int  param,  int  result)  {
+          this .param  =  param;
+          this .result  =  result;
+     } 
 
      @Test
-
-      public   void  square()  {
-
+     public   void  square()  {
          calculator.square(param);
-
          assertEquals(result, calculator.getResult());
-
      }
 
  } 
@@ -289,9 +263,12 @@ public   class  SquareTest  {
 <li>@RunWith(Suite.class)</li>
 </ul>
 </li>
-<li>2.打包的类作为参数传递进去,结尾不加;<br>  这只是个注解<br>  @Suite.SuiteClasses({<pre><code>xx.class,
-xx.class
-</code></pre>  })</li>
+<li><p>2.打包的类作为参数传递进去,结尾不加;<br>  这只是个注解</p>
+<p>  @Suite.SuiteClasses({</p>
+<pre><code>SquareTest.class,
+CalculatorTest.class
+</code></pre><p>  })</p>
+</li>
 <li>3.随便起个类名,内容为空即可<br>  public class xxx {}<h5 id="实例"><a href="#实例" class="headerlink" title="实例:"></a>实例:</h5>  @RunWith(Suite. class )<br>  @Suite.SuiteClasses( {<pre><code>CalculatorTest. class ,
 SquareTest. class 
 </code></pre>   } )<br>   public   class  AllCalculatorTests  {<br>   } </li>
@@ -509,6 +486,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
@@ -517,15 +502,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color1">junit</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -538,10 +519,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">开源小项目</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">junit</a>
               </li>
             
             <div class="clearfix"></div>

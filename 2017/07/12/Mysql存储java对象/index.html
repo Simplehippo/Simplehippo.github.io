@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Mysql存储java对象 | 杨育才的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="MySQL  设置字段为 blob 保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes)">
+  <meta name="description" content="MySQL  设置字段为 blob">
 <meta name="keywords" content="mysql,java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mysql存储java对象">
 <meta property="og:url" content="http://yoursite.com/2017/07/12/Mysql存储java对象/index.html">
 <meta property="og:site_name" content="杨育才的个人博客">
-<meta property="og:description" content="MySQL  设置字段为 blob 保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes)">
-<meta property="og:updated_time" content="2017-07-12T08:15:02.864Z">
+<meta property="og:description" content="MySQL  设置字段为 blob">
+<meta property="og:updated_time" content="2017-07-12T08:21:49.445Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mysql存储java对象">
-<meta name="twitter:description" content="MySQL  设置字段为 blob 保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes)">
+<meta name="twitter:description" content="MySQL  设置字段为 blob">
   
     <link rel="alternative" href="/atom.xml" title="杨育才的个人博客" type="application/atom+xml">
   
@@ -164,9 +164,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="MySQL-设置字段为-blob"><a href="#MySQL-设置字段为-blob" class="headerlink" title="MySQL  设置字段为 blob"></a>MySQL  设置字段为 blob</h3><ul>
-<li>保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes)<br><a id="more"></a></li>
-<li><pre><code>ByteArrayOutputStream baos = new ByteArrayOutputStream();    
+        <h3 id="MySQL-设置字段为-blob"><a href="#MySQL-设置字段为-blob" class="headerlink" title="MySQL  设置字段为 blob"></a>MySQL  设置字段为 blob</h3><a id="more"></a>
+<ul>
+<li><p>保存对象，先将对象序列化为byte[]  使用 setObject(byte[] bytes)</p>
+<pre><code>ByteArrayOutputStream baos = new ByteArrayOutputStream();    
 ObjectOutputStream out = null;     
 try {       
     out = new ObjectOutputStream(baos);       
@@ -424,6 +425,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
@@ -432,15 +441,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color1">junit</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -453,10 +458,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">开源小项目</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">junit</a>
               </li>
             
             <div class="clearfix"></div>
