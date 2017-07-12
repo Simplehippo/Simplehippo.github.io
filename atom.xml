@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-11T17:04:49.038Z</updated>
+  <updated>2017-07-11T20:17:43.353Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,30 +16,30 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>tankWar</title>
-    <link href="http://yoursite.com/2017/07/12/title/"/>
-    <id>http://yoursite.com/2017/07/12/title/</id>
+    <title></title>
+    <link href="http://yoursite.com/2017/07/12/tankWar/"/>
+    <id>http://yoursite.com/2017/07/12/tankWar/</id>
     <published>2017-07-11T19:49:45.816Z</published>
-    <updated>2017-07-11T17:04:49.038Z</updated>
+    <updated>2017-07-11T20:17:43.353Z</updated>
     
-    <content type="html"><![CDATA[<p>date: 2017-07-12 00:53:06</p>
-<h2 id="简要介绍"><a href="#简要介绍" class="headerlink" title="简要介绍:"></a>简要介绍:</h2><ul>
+    <content type="html"><![CDATA[<ul>
 <li>只是一个比较简陋的游戏,目前是初代版本,以后看心情更新吧.</li>
 </ul>
 <h2 id="游戏说明"><a href="#游戏说明" class="headerlink" title="游戏说明:"></a>游戏说明:</h2><ul>
 <li>坦克大战分为两个阵营,绿队(奇数id号)和红队(偶数id号),开始,然后…就开打吧.</li>
 </ul>
 <h3 id="获取Demo"><a href="#获取Demo" class="headerlink" title="获取Demo"></a>获取Demo</h3><ul>
-<li>demo_exe:<a href="https://github-production-release-asset-2e65be.s3.amazonaws.com/96726712/36a7b864-6692-11e7-955e-76d01e3f58e5?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20170711%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20170711T154533Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=28e18703b48bb71400b80b8e36b7d6d6ffbc61be80dd899e2b99fd4b014daea6&amp;X-Amz-SignedHeaders=host&amp;actor_id=24547457&amp;response-content-disposition=attachment%3B%20filename%3Ddemo_exe.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="external">点击获取压缩包</a>     <br></li>
-<li>demo_runnableJar:<a href="https://github-production-release-asset-2e65be.s3.amazonaws.com/96726712/36e42592-6692-11e7-8752-03595df83811?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20170711%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20170711T154607Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=572735e38532dd93d16ca544db862477e3e139aceada723ff5b037f9ac04ccf7&amp;X-Amz-SignedHeaders=host&amp;actor_id=24547457&amp;response-content-disposition=attachment%3B%20filename%3Ddemo_runnableJar.zip&amp;response-content-type=application%2Foctet-stream" target="_blank" rel="external">点击获取压缩包</a></li>
+<li>点击<a href="https://github.com/Simplehippo/tankWar/releases" target="_blank" rel="external">这里</a>获取</li>
 </ul>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;date: 2017-07-12 00:53:06&lt;/p&gt;
-&lt;h2 id=&quot;简要介绍&quot;&gt;&lt;a href=&quot;#简要介绍&quot; class=&quot;headerlink&quot; title=&quot;简要介绍:&quot;&gt;&lt;/a&gt;简要介绍:&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;只是一个比较简陋的游戏,目前是初代版本,以
+      &lt;ul&gt;
+&lt;li&gt;只是一个比较简陋的游戏,目前是初代版本,以后看心情更新吧.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;游戏说明&quot;&gt;&lt;a href=&quot;#游戏说明&quot; class=&quot;headerlink&quot; title=&quot;游戏说明:&quot;&gt;&lt;/a&gt;游戏说明:&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;坦克大战
     
     </summary>
     
