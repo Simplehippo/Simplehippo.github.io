@@ -71,7 +71,7 @@
     <link href="http://yoursite.com/2017/07/12/Mysql%E5%AD%98%E5%82%A8java%E5%AF%B9%E8%B1%A1/"/>
     <id>http://yoursite.com/2017/07/12/Mysql存储java对象/</id>
     <published>2017-07-12T07:38:48.000Z</published>
-    <updated>2017-07-14T16:29:53.821Z</updated>
+    <updated>2017-07-14T16:33:19.835Z</updated>
     
     <content type="html"><![CDATA[<h4 id="MySQL-设置字段为-blob-java对象实现Serializable接口"><a href="#MySQL-设置字段为-blob-java对象实现Serializable接口" class="headerlink" title="MySQL 设置字段为 blob , java对象实现Serializable接口"></a>MySQL 设置字段为 blob , java对象实现Serializable接口</h4><ul>
 <li>保存对象 先将对象转为byte[] (之后序列化到数据库中)</li>
@@ -83,7 +83,7 @@
 </li>
 </ul>
 <ul>
-<li><p>获取对象 使用getBytes()，将获取的byte[]反序列化为Java 对象</p>
+<li><p>获取对象 将反序列化获取的byte[]反序列化为Java 对象</p>
   <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> java对象类型 getObj (<span class="keyword">byte</span>[] data) &#123;</div><div class="line">	ByteArrayInputStream bais;     </div><div class="line">	ObjectInputStream ois = <span class="keyword">null</span>;     </div><div class="line">	<span class="keyword">try</span>&#123;       </div><div class="line">	    bais = <span class="keyword">new</span> ByteArrayInputStream(data);       </div><div class="line">	    ois = <span class="keyword">new</span> ObjectInputStream(bais);         </div><div class="line">	    <span class="keyword">return</span> (java对象类型)ois.readObject();     </div><div class="line">	&#125;<span class="keyword">finally</span>&#123;       </div><div class="line">	    <span class="keyword">if</span>(ois != <span class="keyword">null</span>)&#123;         </div><div class="line">	        <span class="keyword">try</span> &#123;           </div><div class="line">	            ois.close();         </div><div class="line">	        &#125; <span class="keyword">catch</span> (IOException e) &#123;           </div><div class="line">	            e.printStackTrace();          </div><div class="line">	        &#125;       </div><div class="line">	    &#125;     </div><div class="line">	&#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
