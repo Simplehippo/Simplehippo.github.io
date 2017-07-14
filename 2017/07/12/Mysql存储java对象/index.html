@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Mysql存储java对象 | 杨育才的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="MySQL 设置字段为 blob , java对象实现Serializable接口 保存对象，先将对象序列化为byte[] 获取对象 使用getBytes()，将获取的byte[]反序列化为Java 对象">
+  <meta name="description" content="MySQL 设置字段为 blob , java对象实现Serializable接口 保存对象 先将对象转为byte[] (之后序列化到数据库中) 获取对象 (先从数据库中反序列化读出byte[]) 将获取的byte[]转为Java对象">
 <meta name="keywords" content="mysql,java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mysql存储java对象">
 <meta property="og:url" content="http://yoursite.com/2017/07/12/Mysql存储java对象/index.html">
 <meta property="og:site_name" content="杨育才的个人博客">
-<meta property="og:description" content="MySQL 设置字段为 blob , java对象实现Serializable接口 保存对象，先将对象序列化为byte[] 获取对象 使用getBytes()，将获取的byte[]反序列化为Java 对象">
-<meta property="og:updated_time" content="2017-07-12T11:40:55.350Z">
+<meta property="og:description" content="MySQL 设置字段为 blob , java对象实现Serializable接口 保存对象 先将对象转为byte[] (之后序列化到数据库中) 获取对象 (先从数据库中反序列化读出byte[]) 将获取的byte[]转为Java对象">
+<meta property="og:updated_time" content="2017-07-14T16:29:53.821Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mysql存储java对象">
-<meta name="twitter:description" content="MySQL 设置字段为 blob , java对象实现Serializable接口 保存对象，先将对象序列化为byte[] 获取对象 使用getBytes()，将获取的byte[]反序列化为Java 对象">
+<meta name="twitter:description" content="MySQL 设置字段为 blob , java对象实现Serializable接口 保存对象 先将对象转为byte[] (之后序列化到数据库中) 获取对象 (先从数据库中反序列化读出byte[]) 将获取的byte[]转为Java对象">
   
     <link rel="alternative" href="/atom.xml" title="杨育才的个人博客" type="application/atom+xml">
   
@@ -165,20 +165,20 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h4 id="MySQL-设置字段为-blob-java对象实现Serializable接口"><a href="#MySQL-设置字段为-blob-java对象实现Serializable接口" class="headerlink" title="MySQL 设置字段为 blob , java对象实现Serializable接口"></a>MySQL 设置字段为 blob , java对象实现Serializable接口</h4><ul>
-<li>保存对象，先将对象序列化为byte[]</li>
-<li>获取对象 使用getBytes()，将获取的byte[]反序列化为Java 对象<br><a id="more"></a></li>
+<li>保存对象 先将对象转为byte[] (之后序列化到数据库中)</li>
+<li>获取对象 (先从数据库中反序列化读出byte[]) 将获取的byte[]转为Java对象<br><a id="more"></a></li>
 </ul>
 <h3 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h3><ul>
 <li><p>保存对象，先将对象序列化为byte[]</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">ByteArrayOutputStream baos = <span class="keyword">new</span> ByteArrayOutputStream();    </div><div class="line">ObjectOutputStream out = <span class="keyword">null</span>;     </div><div class="line"><span class="keyword">try</span> &#123;       </div><div class="line">    out = <span class="keyword">new</span> ObjectOutputStream(baos);       </div><div class="line">    out.writeObject(java实例对象);     </div><div class="line">&#125; <span class="keyword">catch</span> (IOException e) &#123;       </div><div class="line">    logger.error(<span class="string">"msg2Bytes error!"</span>, e);     </div><div class="line">&#125;<span class="keyword">finally</span>&#123;       </div><div class="line">    <span class="keyword">try</span> &#123;         </div><div class="line">        out.close();       </div><div class="line">    &#125; <span class="keyword">catch</span> (IOException e) &#123;         </div><div class="line">        logger.error(<span class="string">"msg2Bytes error!"</span>, e);       </div><div class="line">    &#125;     </div><div class="line">&#125;          </div><div class="line"><span class="keyword">return</span> baos.toByteArray();</div></pre></td></tr></table></figure>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">byte</span>[] getBytes (java对象) &#123; </div><div class="line">	ByteArrayOutputStream baos = <span class="keyword">new</span> ByteArrayOutputStream();    </div><div class="line">	ObjectOutputStream oos = <span class="keyword">null</span>;     </div><div class="line">	<span class="keyword">try</span> &#123;       </div><div class="line">	    oos = <span class="keyword">new</span> ObjectOutputStream(baos);       </div><div class="line">	    oos.writeObject(java对象);     </div><div class="line">	&#125; <span class="keyword">catch</span> (IOException e) &#123;       </div><div class="line">	    e.printStackTrace();    </div><div class="line">	&#125;<span class="keyword">finally</span>&#123;       </div><div class="line">	    <span class="keyword">try</span> &#123;         </div><div class="line">	        oos.close();       </div><div class="line">	    &#125; <span class="keyword">catch</span> (IOException e) &#123;         </div><div class="line">	        e.printStackTrace();       </div><div class="line">	    &#125;     </div><div class="line">	&#125;          </div><div class="line">	<span class="keyword">return</span> baos.toByteArray(); </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <ul>
 <li><p>获取对象 使用getBytes()，将获取的byte[]反序列化为Java 对象</p>
-  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">ByteArrayInputStream bais;     </div><div class="line">ObjectInputStream in = <span class="keyword">null</span>;     </div><div class="line"><span class="keyword">try</span>&#123;       </div><div class="line">    bais = <span class="keyword">new</span> ByteArrayInputStream(bytes);       </div><div class="line">    in = <span class="keyword">new</span> ObjectInputStream(bais);         </div><div class="line">    <span class="keyword">return</span> (java类)in.readObject();     </div><div class="line">&#125;<span class="keyword">finally</span>&#123;       </div><div class="line">    <span class="keyword">if</span>(in != <span class="keyword">null</span>)&#123;         </div><div class="line">        <span class="keyword">try</span> &#123;           </div><div class="line">            in.close();         </div><div class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;           </div><div class="line">            logger.error(<span class="string">"bytes2Msg error!"</span>, e);         </div><div class="line">        &#125;       </div><div class="line">    &#125;     </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> java对象类型 getObj (<span class="keyword">byte</span>[] data) &#123;</div><div class="line">	ByteArrayInputStream bais;     </div><div class="line">	ObjectInputStream ois = <span class="keyword">null</span>;     </div><div class="line">	<span class="keyword">try</span>&#123;       </div><div class="line">	    bais = <span class="keyword">new</span> ByteArrayInputStream(data);       </div><div class="line">	    ois = <span class="keyword">new</span> ObjectInputStream(bais);         </div><div class="line">	    <span class="keyword">return</span> (java对象类型)ois.readObject();     </div><div class="line">	&#125;<span class="keyword">finally</span>&#123;       </div><div class="line">	    <span class="keyword">if</span>(ois != <span class="keyword">null</span>)&#123;         </div><div class="line">	        <span class="keyword">try</span> &#123;           </div><div class="line">	            ois.close();         </div><div class="line">	        &#125; <span class="keyword">catch</span> (IOException e) &#123;           </div><div class="line">	            e.printStackTrace();          </div><div class="line">	        &#125;       </div><div class="line">	    &#125;     </div><div class="line">	&#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="网上的其他方式会有各类问题，慎用。"><a href="#网上的其他方式会有各类问题，慎用。" class="headerlink" title="网上的其他方式会有各类问题，慎用。"></a>网上的其他方式会有各类问题，慎用。</h3><h4 id="包括"><a href="#包括" class="headerlink" title="包括:"></a>包括:</h4><ul>
+<h3 id="网上的其他方式会有各类问题，慎用。-借鉴"><a href="#网上的其他方式会有各类问题，慎用。-借鉴" class="headerlink" title="网上的其他方式会有各类问题，慎用。(借鉴)"></a>网上的其他方式会有各类问题，慎用。(借鉴)</h3><h4 id="包括"><a href="#包括" class="headerlink" title="包括:"></a>包括:</h4><ul>
 <li>1.设置url参数 <ul>
 <li>autoDeserialize=true</li>
 </ul>
@@ -402,19 +402,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">生活</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">心情</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">生活</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">心情</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -426,6 +426,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">开源小项目</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">net</a>
               </li>
              
@@ -434,15 +442,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">junit</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">开源小项目</a>
               </li>
             
             <div class="clearfix"></div>
