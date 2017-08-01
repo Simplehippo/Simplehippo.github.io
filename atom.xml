@@ -498,6 +498,33 @@ p{
   </entry>
   
   <entry>
+    <title>spring destroy回调</title>
+    <link href="http://yoursite.com/2017/07/12/spring%20%20destroy%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2017/07/12/spring  destroy问题/</id>
+    <published>2017-07-12T02:58:14.000Z</published>
+    <updated>2017-08-01T15:29:29.577Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Spring-bean的destroy方法哪种情况才会回调"><a href="#Spring-bean的destroy方法哪种情况才会回调" class="headerlink" title="Spring bean的destroy方法哪种情况才会回调?"></a>Spring bean的destroy方法哪种情况才会回调?</h2><ul>
+<li>今天开始学习spring, 发现在xml中配置bean的destroy-method之后, 确只有scope =”singleton”的bean,spring容器才会回调自定义的destroy方法, 一旦scope =”prototype”, 就不会在回调销毁方法了.       </li>
+<li>经查找资料和spring文档,我发现spring对这两类scope都会调用init-method, 但只有scope=”singleton”的bean结束时会调用销毁方法.    </li>
+<li>换句话说, 就是spring容器掌管scope=”singleton”的bean的生命周期, 从初始化到被销毁都由spring容器控制, 而对于scope=”prototype”的bean的生命周期spring只负责初始化和装配包装, 之后就会把这个bean交给客户端, 由客户端来决定是否释放该bean占用的资源,spring容器不在负责这个bean的后续.所以也不会再调用销毁方法了.</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Spring-bean的destroy方法哪种情况才会回调&quot;&gt;&lt;a href=&quot;#Spring-bean的destroy方法哪种情况才会回调&quot; class=&quot;headerlink&quot; title=&quot;Spring bean的destroy方法哪种情况才会回调?&quot;&gt;&lt;/
+    
+    </summary>
+    
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+      <category term="spring" scheme="http://yoursite.com/tags/spring/"/>
+    
+  </entry>
+  
+  <entry>
     <title>tankWar</title>
     <link href="http://yoursite.com/2017/07/12/tankWar/"/>
     <id>http://yoursite.com/2017/07/12/tankWar/</id>
