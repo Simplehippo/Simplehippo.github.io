@@ -145,6 +145,79 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-spring  destroy问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/02/spring  destroy问题/">spring destroy回调</a>
+    </h1>
+  
+
+        
+        <a href="/2017/08/02/spring  destroy问题/" class="archive-article-date">
+  	<time datetime="2017-08-02T15:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Spring-bean的destroy方法哪种情况才会回调"><a href="#Spring-bean的destroy方法哪种情况才会回调" class="headerlink" title="Spring bean的destroy方法哪种情况才会回调?"></a>Spring bean的destroy方法哪种情况才会回调?</h2><ul>
+<li>今天开始学习spring, 发现在xml中配置bean的destroy-method之后, 确只有scope =”singleton”的bean,spring容器才会回调自定义的destroy方法, 一旦scope =”prototype”, 就不会在回调销毁方法了.       </li>
+<li>经查找资料和spring文档,我发现spring对这两类scope都会调用init-method, 但只有scope=”singleton”的bean结束时会调用销毁方法.    </li>
+<li>换句话说, 就是spring容器掌管scope=”singleton”的bean的生命周期, 从初始化到被销毁都由spring容器控制, 而对于scope=”prototype”的bean的生命周期spring只负责初始化和装配包装, 之后就会把这个bean交给客户端, 由客户端来决定是否释放该bean占用的资源,spring容器不在负责这个bean的后续.所以也不会再调用销毁方法了.</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/08/02/spring  destroy问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-java获取本机局域网IP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -594,79 +667,6 @@
 
 
   
-    <article id="post-spring  destroy问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/12/spring  destroy问题/">spring destroy回调</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/12/spring  destroy问题/" class="archive-article-date">
-  	<time datetime="2017-07-12T02:58:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Spring-bean的destroy方法哪种情况才会回调"><a href="#Spring-bean的destroy方法哪种情况才会回调" class="headerlink" title="Spring bean的destroy方法哪种情况才会回调?"></a>Spring bean的destroy方法哪种情况才会回调?</h2><ul>
-<li>今天开始学习spring, 发现在xml中配置bean的destroy-method之后, 确只有scope =”singleton”的bean,spring容器才会回调自定义的destroy方法, 一旦scope =”prototype”, 就不会在回调销毁方法了.       </li>
-<li>经查找资料和spring文档,我发现spring对这两类scope都会调用init-method, 但只有scope=”singleton”的bean结束时会调用销毁方法.    </li>
-<li>换句话说, 就是spring容器掌管scope=”singleton”的bean的生命周期, 从初始化到被销毁都由spring容器控制, 而对于scope=”prototype”的bean的生命周期spring只负责初始化和装配包装, 之后就会把这个bean交给客户端, 由客户端来决定是否释放该bean占用的资源,spring容器不在负责这个bean的后续.所以也不会再调用销毁方法了.</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/12/spring  destroy问题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-tankWar" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -923,6 +923,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">生活</a>
               </li>
              
@@ -935,27 +943,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">spring</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">开源小项目</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">junit</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -967,7 +959,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color1">junit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">开源小项目</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">spring</a>
               </li>
             
             <div class="clearfix"></div>
