@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-01T16:02:16.762Z</updated>
+  <updated>2017-08-11T06:00:32.737Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spring MVC No mapping found for HTTP request with URI [/Hello/hello] in DispatcherServlet with name &#39;Hello&#39;</title>
+    <link href="http://yoursite.com/2017/08/11/spring%20No%20Mapping%20Exception/"/>
+    <id>http://yoursite.com/2017/08/11/spring No Mapping Exception/</id>
+    <published>2017-08-11T05:46:17.000Z</published>
+    <updated>2017-08-11T06:00:32.737Z</updated>
+    
+    <content type="html"><![CDATA[<font color="red" size="3">No mapping found for HTTP request with URI [/Hello/hello] in DispatcherServlet with name ‘Hello’</font>
+
+<font color="red" size="3">Servlet [Hello] in web application [/Hello] threw load() exception<br>java.lang.ClassNotFoundException: com.tutorialspoint.StudentController</font>    
+
+
+<p>这两个异常折腾了我两个小时, 经过排查和找资料</p>
+<ul>
+<li><p>解决办法:   </p>
+  <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;servlet&gt;   </div><div class="line">	&lt;servlet-name&gt;Hello&lt;/servlet-name&gt;</div><div class="line">	&lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;</div><div class="line">	&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;</div><div class="line">&lt;/servlet&gt;</div><div class="line">&lt;servlet-mapping&gt;</div><div class="line">	&lt;servlet-name&gt;Hello&lt;/servlet-name&gt;</div><div class="line">	&lt;url-pattern&gt;/&lt;/url-pattern&gt;</div><div class="line">&lt;/servlet-mapping&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>在Eclipse EE 中上述代码的 </p>
+<p>url-pattern   </p>
+<p>要使用/<br>而不是 /*   </p>
+<p>而且要注意完全重启,重新启动eclipse EE, 重新启动Tomcat   </p>
+<p>我就是没有完全重启, 所以浪费了很多不必要的时间</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;font color=&quot;red&quot; size=&quot;3&quot;&gt;No mapping found for HTTP request with URI [/Hello/hello] in DispatcherServlet with name ‘Hello’&lt;/font&gt;
+
+&lt;font co
+    
+    </summary>
+    
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+      <category term="spring" scheme="http://yoursite.com/tags/spring/"/>
+    
+  </entry>
   
   <entry>
     <title>spring destroy回调</title>
