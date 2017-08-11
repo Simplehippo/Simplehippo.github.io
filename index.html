@@ -152,7 +152,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/11/spring No Mapping Exception/">Spring MVC No mapping found for HTTP request with URI [/Hello/hello] in DispatcherServlet with name &#39;Hello&#39;</a>
+      <a class="article-title" href="/2017/08/11/spring No Mapping Exception/">Spring MVC No mapping found for HTTP request with URI</a>
     </h1>
   
 
@@ -172,16 +172,10 @@
 
 <p>这两个异常折腾了我两个小时, 经过排查和找资料</p>
 <ul>
-<li><p>解决办法:   </p>
-  <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;servlet&gt;   </div><div class="line">	&lt;servlet-name&gt;Hello&lt;/servlet-name&gt;</div><div class="line">	&lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;</div><div class="line">	&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;</div><div class="line">&lt;/servlet&gt;</div><div class="line">&lt;servlet-mapping&gt;</div><div class="line">	&lt;servlet-name&gt;Hello&lt;/servlet-name&gt;</div><div class="line">	&lt;url-pattern&gt;/&lt;/url-pattern&gt;</div><div class="line">&lt;/servlet-mapping&gt;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>在Eclipse EE 中上述代码的 </p>
-<p>url-pattern   </p>
-<p>要使用/<br>而不是 /*   </p>
-<p>而且要注意完全重启,重新启动eclipse EE, 重新启动Tomcat   </p>
-<p>我就是没有完全重启, 所以浪费了很多不必要的时间</p>
-
+<li>解决办法:
+        
+          <a class="article-more-a" href="/2017/08/11/spring No Mapping Exception/#more">more >></a>
+        
       
 
       
@@ -1015,14 +1009,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">笔记</a>
               </li>
              
@@ -1031,19 +1017,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">spring</a>
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">开源小项目</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">junit</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1052,6 +1034,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">ip</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">junit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">spring</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">开源小项目</a>
               </li>
             
             <div class="clearfix"></div>
